@@ -1,6 +1,24 @@
 :root {
-  --dark: #000;
+  --dark-900: #000;
   --dark-800: #161b22;
+
+  --blue-400-bg: #0A3069;
+  --blue-300-bg: #0969DA;
+  --blue-200-bg: #54AEFF;
+  --blue-100-bg: #B6E3FF;
+
+  --green-400: #0e4429;
+  --green-300: #006d32;
+  --green-200: #26a641;
+  --green-100: #39d353;
+
+  --divider: #8b949e;
+  
+  --gray-400: #576270;
+  --gray-300: #848d97;
+
+  --red-400: #eb3342;
+  --red-200: #ff7b72;
 
   --white: #fff;
 }
