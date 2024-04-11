@@ -1,0 +1,26 @@
+:root {
+  --dark: #000;
+  --dark-800: #161b22;
+
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 93.75%;
+  color: var(--white);
+}
+
+body {
+  background-color: var(--dark-800);
+}
+
+button {
+  cursor: pointer;
+}
