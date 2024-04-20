@@ -1,9 +1,9 @@
 <template>
   <header>
-    <router-link :to="{name: 'Home'}">
+    <router-link :to="{name: 'Home'}" class="router-link">
       <div class="header-content">
         <img src="../assets/keyboard.svg" alt="">
-        <span class="header-link">dinobergueviana</span>
+        <span class="link-label">dinobergueviana</span>
       </div>
     </router-link>
   </header>
@@ -34,8 +34,11 @@ header {
   gap: .5em;
 }
 
+.router-link {
+  text-decoration: none;
+}
 
-.header-link {
+.link-label {
   color: var(--white);
   text-decoration: none;
 }
