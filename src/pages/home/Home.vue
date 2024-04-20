@@ -9,3 +9,9 @@ export default {
   name: 'HomePage',
 }
 </script>
+
+<style scoped>
+.title {
+  font-weight: 500;
+}
+</style>
