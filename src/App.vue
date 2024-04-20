@@ -2,9 +2,9 @@
   <section>
     <!-- add navbar here -->
     <Navbar/>
-    <!-- <div class="main-container">
+    <main class="main-container">
       <router-view />
-    </div> -->
+    </main>
   </section>
 </template>
 
@@ -19,4 +19,12 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+  .main-container {
+    width: min(90vw, 800px);
+    margin: auto;
+
+    border-right: 1px solid var(--gray-600);
+    border-left: 1px solid var(--gray-600);
+  }
+</style>

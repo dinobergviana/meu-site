@@ -23,6 +23,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background: var(--dark-900);
 }
 
 .header-content {
