@@ -5,16 +5,19 @@
     <main class="main-container">
       <router-view />
     </main>
+    <CFooter />
   </section>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
+import CFooter from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Navbar
+    Navbar,
+    CFooter
   }
 }
 </script>
