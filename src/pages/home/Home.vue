@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 .home-container {
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
   padding: 2em;
   display: flex;
   align-items: center;
