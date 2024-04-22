@@ -1,7 +1,7 @@
 <template>
   <section>
-    <!-- add navbar here -->
-    <Navbar/>
+
+    <!-- <Navbar/> -->
     <main class="main-container">
       <router-view />
     </main>
@@ -10,13 +10,11 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
 import CFooter from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Navbar,
     CFooter
   }
 }
