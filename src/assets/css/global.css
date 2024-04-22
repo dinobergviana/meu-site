@@ -2,10 +2,10 @@
   --dark-900: #111319;
   --dark-800: #161b22;
 
-  --blue-400-bg: #0A3069;
-  --blue-300-bg: #0969DA;
-  --blue-200-bg: #54AEFF;
-  --blue-100-bg: #B6E3FF;
+  --blue-400: #0A3069;
+  --blue-300: #0969DA;
+  --blue-200: #54AEFF;
+  --blue-100: #B6E3FF;
 
   --green-400: #0e4429;
   --green-300: #006d32;
@@ -16,6 +16,7 @@
   
   --gray-600: #3a3b3b;
   --gray-400: #576270;
+  --gray-200: #717c8a;
 
   --red-400: #eb3342;
   --red-200: #ff7b72;
@@ -42,3 +43,4 @@ body {
 button {
   cursor: pointer;
 }
+
