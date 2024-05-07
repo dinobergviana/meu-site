@@ -14,13 +14,21 @@
         <img src="../../assets/whatsapp.svg" alt="">
       </a>
     </div>
+    <div class="download-resume-container">
+      <DownloadButton label="Baixar Curriculo" />
+    </div>
     <span class="description">Site em construção.</span>
   </section>
 </template>
 <script>
 
+import DownloadButton from '../../components/DownloadButton.vue'
+
 export default {
   name: 'HomePage',
+  components: {
+    DownloadButton
+  }
 }
 </script>
 
@@ -68,5 +76,9 @@ export default {
 
 .media-link img {
   height: 20px;
+}
+
+.download-resume-container {
+  margin-bottom: 1rem;
 }
 </style>
