@@ -1,5 +1,5 @@
 <template>
-  <a href="../assets/resume.pdf" class="btn-base" download>
+  <a href="#" class="btn-base" download>
     <span>{{ label }}</span>
   </a>
 </template>
