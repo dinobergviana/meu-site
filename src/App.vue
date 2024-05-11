@@ -22,10 +22,6 @@ export default {
 
 <style scoped>
   .main-container {
-    width: min(90vw, 800px);
-    margin: auto;
-
-    /* border-right: 1px solid var(--gray-600);
-    border-left: 1px solid var(--gray-600); */
+    background: var(--dark-800);
   }
 </style>

@@ -36,10 +36,6 @@ html {
   color: var(--white);
 }
 
-body {
-  background-color: var(--dark-800);
-}
-
 button {
   cursor: pointer;
 }
