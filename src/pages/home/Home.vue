@@ -28,22 +28,6 @@
 
 export default {
   name: 'HomePage',
-  setup() {
-    const handleDownloadResume = (url) => {
-      console.log(url)
-      const a = document.createElement('a')
-      a.href = url
-      console.log(a)
-      a.download = url.split('/').pop()
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-    }
-
-    return {
-      handleDownloadResume
-    }
-  }
 }
 </script>
 
