@@ -22,6 +22,11 @@
       </a>
     </div>
     <span class="description">Site em construção.</span>
+    <div class="navigate-down-container">
+      <a href="#" class="navigate-down-button">
+        <img src="../../assets/arrow-down.svg" alt="">
+      </a>
+    </div>
   </section>
 </template>
 <script>
@@ -33,6 +38,7 @@ export default {
 
 <style scoped>
 .home-container {
+  position: relative;
   min-height: 100vh;
   padding: 2em;
   display: flex;
@@ -93,5 +99,29 @@ export default {
   width: 4px;
   border-radius: 50%;
   background: var(--gray-200);
+}
+
+.navigate-down-container {
+  position: absolute;
+  bottom: 1em;
+}
+
+.navigate-down-button {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.8;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.navigate-down-button:hover {
+  opacity: 1;
 }
 </style>
