@@ -3,6 +3,13 @@
     <div>
       <h1 class="title">Olá, eu sou Dinobergue Viana.</h1>
     </div>
+    <div class="bio-description-container">
+      <span class="bio-description">Desenvolvedor Web</span>
+      <div class="dot"></div>
+      <span class="bio-description">Entusiasta Vue</span>
+      <div class="dot"></div>
+      <span class="bio-description">Violonista</span>
+    </div>
     <div class="medias-container">
       <a href="https://www.linkedin.com/in/dinobergue-viana-28574218b/" target="blank" class="media-link">
         <img src="../../assets/linkedin.svg" alt="">
@@ -65,6 +72,17 @@ export default {
   color: var(--red-200);
 }
 
+.bio-description-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bio-description {
+  color: var(--gray-200);
+  font-size: 1.1rem;
+}
+
 .medias-container {
   display: flex;
   align-items: center;
@@ -84,5 +102,12 @@ export default {
 
 .media-link img {
   height: 20px;
+}
+
+.dot {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: var(--gray-200);
 }
 </style>
