@@ -14,10 +14,6 @@
         <img src="../../assets/whatsapp.svg" alt="">
       </a>
     </div>
-    <!-- <div class="download-resume-container">
-      <button type="button" class="download-resume-btn" @click="handleDownloadResume('src/assets/resume.pdf')">Baixar Currículo</button>
-    </div> -->
-    <a class="download-resume-btn" href="src/assets/resume.pdf" download="resume.pdf">Download</a>
     <span class="description">Site em construção.</span>
   </section>
 </template>
@@ -88,25 +84,5 @@ export default {
 
 .media-link img {
   height: 20px;
-}
-
-.download-resume-container {
-  margin-bottom: 1rem;
-}
-
-.download-resume-btn {
-  text-decoration: none;
-  color: #fff;
-  padding: 0.6rem 0.8rem;
-  height: 40px;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  opacity: 0.8;
-  transition: 0.2s;
-}
-
-.download-resume-btn:hover {
-  opacity: 1;
 }
 </style>
