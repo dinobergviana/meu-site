@@ -1,54 +1,66 @@
 <template>
-  <section class="home-container">
-    <div>
-      <h1 class="title">Olá, eu sou Dinobergue Viana.</h1>
-    </div>
-    <div class="bio-description-container">
-      <span class="bio-description">Desenvolvedor Web</span>
-      <div class="dot"></div>
-      <span class="bio-description">Entusiasta Vue</span>
-      <div class="dot"></div>
-      <span class="bio-description">Violonista</span>
-    </div>
-    <div class="medias-container">
-      <a href="https://www.linkedin.com/in/dinobergue-viana-28574218b/" target="blank" class="media-link">
-        <img src="../../assets/linkedin.svg" alt="">
-      </a>
-      <a href="https://github.com/dinobergviana" target="blank" class="media-link">
-        <img src="../../assets/github.svg" alt="">
-      </a>
-      <a href="https://api.whatsapp.com/send?phone=5586998055574" target="blank" class="media-link">
-        <img src="../../assets/whatsapp.svg" alt="">
-      </a>
-    </div>
-    <span class="description">Site em construção.</span>
+  <section>
+    <section class="home-container">
+      <div>
+        <h1 class="title">Olá, eu sou Dinobergue Viana.</h1>
+      </div>
+      <div class="bio-description-container">
+        <span class="bio-description">Desenvolvedor Web</span>
+        <div class="dot"></div>
+        <span class="bio-description">Entusiasta Vue</span>
+        <div class="dot"></div>
+        <span class="bio-description">Violonista</span>
+      </div>
+      <div class="medias-container">
+        <a href="https://www.linkedin.com/in/dinobergue-viana-28574218b/" target="blank" class="media-link">
+          <img src="../../assets/linkedin.svg" alt="">
+        </a>
+        <a href="https://github.com/dinobergviana" target="blank" class="media-link">
+          <img src="../../assets/github.svg" alt="">
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5586998055574" target="blank" class="media-link">
+          <img src="../../assets/whatsapp.svg" alt="">
+        </a>
+      </div>
+      <span class="description">Site em construção.</span>
+      <div class="navigate-down-container">
+        <a href="#about" class="navigate-down-button">
+          <img src="../../assets/arrow-down.svg" alt="">
+        </a>
+      </div>
+    </section>
+    <About />
   </section>
 </template>
 <script>
 
+import About from '../about/About.vue'
+
 export default {
   name: 'HomePage',
-  setup() {
-    const handleDownloadResume = (url) => {
-      console.log(url)
-      const a = document.createElement('a')
-      a.href = url
-      console.log(a)
-      a.download = url.split('/').pop()
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-    }
-
-    return {
-      handleDownloadResume
-    }
-  }
+  components: {About}
 }
 </script>
 
 <style scoped>
+@keyframes go-back {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+  0% {
+    transform: translateY(15px);
+  }
+}
+
 .home-container {
+  position: relative;
   min-height: 100vh;
   padding: 2em;
   display: flex;
@@ -109,5 +121,30 @@ export default {
   width: 4px;
   border-radius: 50%;
   background: var(--gray-200);
+}
+
+.navigate-down-container {
+  position: absolute;
+  bottom: 1em;
+  animation: go-back 1s;
+}
+
+.navigate-down-button {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.8;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.navigate-down-button:hover {
+  opacity: 1;
 }
 </style>
