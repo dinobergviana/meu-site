@@ -7,8 +7,6 @@
       <div class="bio-description-container">
         <span class="bio-description">Desenvolvedor Web</span>
         <div class="dot"></div>
-        <span class="bio-description">Entusiasta Vue</span>
-        <div class="dot"></div>
         <span class="bio-description">Violonista</span>
       </div>
       <div class="medias-container">
