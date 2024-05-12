@@ -13,11 +13,11 @@ export default {
 
 <style scoped>
 footer {
-  background: var(--dark-800);
+  background: var(--white-100);
 }
 .footer-container {
   padding: 1em;
   text-align: center;
-  color: var(--gray-400);
+  color: var(--gray-200);
 }
 </style>

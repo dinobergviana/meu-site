@@ -22,6 +22,7 @@
   --red-200: #ff7b72;
 
   --white: #fff;
+  --white-100: #f3f4f6; 
 }
 
 * {
@@ -34,6 +35,7 @@ html {
   font-family: "Inter", sans-serif;
   font-size: 93.75%;
   color: var(--white);
+  scroll-behavior: smooth;
 }
 
 button {
