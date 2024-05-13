@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import CFooter from './components/Footer.vue'
+import CFooter from './components/global/Footer.vue'
 
 export default {
   name: 'App',
