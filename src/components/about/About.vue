@@ -40,7 +40,7 @@ export default {
 }
 
 .about-title {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--gray-600);
   margin-bottom: 3rem;
 }
@@ -52,9 +52,9 @@ export default {
 }
 
 .about-text-container {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.8rem;
-  color: var(--gray-400);
+  color: var(--gray-600);
   text-align: justify;
 
   display: flex;
