@@ -17,7 +17,6 @@
         <img src="../../assets/whatsapp.svg" alt="">
       </a>
     </div>
-    <span class="description">Site em construção.</span>
     <div class="navigate-down-container">
       <a href="#about" class="navigate-down-button">
         <img src="../../assets/arrow-down.svg" alt="">
@@ -67,11 +66,6 @@ export default {
   font-weight: 700;
   font-size: 3em;
   margin-bottom: 0.2em;
-}
-
-.description {
-  font-size: 1.2em;
-  color: var(--red-200);
 }
 
 .bio-description-container {
