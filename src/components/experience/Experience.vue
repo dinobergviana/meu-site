@@ -6,23 +6,23 @@
     <div class="companies-container">
       <div class="company-container">
         <h3 class="company-name">Educacros S.A</h3>
-        <i class="job-rule">Desenvolvedor Frontend</i>
+        <p class="job-rule">Desenvolvedor Frontend</p>
         <p>Set 2022 - Abr 2024</p>
-        <p>Trabalhei com: Vue.js, Bootstrap Vue, Vuexy</p>
+        <i>Trabalhei com: Vue.js, Bootstrap Vue, Vuexy</i>
       </div>
       <hr class="divider">
       <div class="company-container">
         <h3 class="company-name">Warren Investimentos</h3>
-        <i class="job-rule">Desenvolvedor Frontend</i>
+        <p class="job-rule">Desenvolvedor Frontend</p>
         <p>Jan 2022 - Ago 2022</p>
         <i>Trabalhei com: Vue.js</i>
       </div>
       <hr class="divider">
       <div class="company-container">
         <h3 class="company-name">BoxTi</h3>
-        <i class="job-rule">Desenvolvedor</i>
+        <p class="job-rule">Desenvolvedor</p>
         <p>Mar 2021 - Dez 2021</p>
-        <p>Trabalhei com: HTML, CSS, Javascript, Vue.js, PHP, Node.js, MySQL</p>
+        <i>Trabalhei com: HTML, CSS, Javascript, Vue.js, PHP, Node.js, MySQL</i>
       </div>
     </div>
   </section>
