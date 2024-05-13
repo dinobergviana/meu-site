@@ -82,13 +82,22 @@ a:hover {
   font-size: 1.2rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 840px) {
   .about-container {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 4rem;
   }
 
-  .about-img-container {
-    display: none;
+  .about-img-container img {
+    /* display: none; */
+    height: 200px;
+    margin-bottom: 2rem;
+  }
+
+  .about-title {
+    font-size: 3rem;
+    text-align: center;
   }
 }
 </style>
