@@ -90,7 +90,6 @@ a:hover {
   }
 
   .about-img-container img {
-    /* display: none; */
     height: 200px;
     margin-bottom: 2rem;
   }
