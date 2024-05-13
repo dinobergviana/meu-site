@@ -100,9 +100,12 @@ hr {
     padding: 1rem 4rem;
   }
 
+  .experience-title-container {
+    justify-content: center;
+  }
+
   .experience-title {
-    font-size: 3rem;
-    text-align: center;
+    margin-bottom: 2rem;
   }
 }
 </style>
