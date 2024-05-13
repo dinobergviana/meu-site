@@ -5,18 +5,16 @@
         <h1 class="title">Olá, eu sou Dinobergue Viana.</h1>
       </div>
       <div class="bio-description-container">
-        <span class="bio-description">Desenvolvedor Web</span>
-        <div class="dot"></div>
-        <span class="bio-description">Violonista</span>
+        <span class="bio-description">Programador</span>
       </div>
       <div class="medias-container">
-        <a href="https://www.linkedin.com/in/dinobergue-viana-28574218b/" target="blank" class="media-link">
+        <a href="https://www.linkedin.com/in/dinobergue-viana-28574218b/" target="_blank" class="media-link">
           <img src="../../assets/linkedin.svg" alt="">
         </a>
-        <a href="https://github.com/dinobergviana" target="blank" class="media-link">
+        <a href="https://github.com/dinobergviana" target="_blank" class="media-link">
           <img src="../../assets/github.svg" alt="">
         </a>
-        <a href="https://api.whatsapp.com/send?phone=5586998055574" target="blank" class="media-link">
+        <a href="https://api.whatsapp.com/send?phone=5586998055574" target="_blank" class="media-link">
           <img src="../../assets/whatsapp.svg" alt="">
         </a>
       </div>

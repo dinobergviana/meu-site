@@ -6,9 +6,9 @@
     <div class="about-text-container">
       <div>
         <h2 class="about-title">sobre mim.</h2>
-        <p class="about-text-paragraph">Entrei no mercado de programação como <strong>Desenvolvedor Web</strong> em 2021 após dicidir mudar de carreira em 2019.</p>
-        <p class="about-text-paragraph">Atualmente <strong>estou cursando Análise e Desenvolvimento de Sistemas</strong> pela Uni Dom Bosco e possuo certificado em Desenvolvimento Web Full Stack Node pela Digital House Brasil.</p>
-        <p class="about-text-paragraph">Além da faculdade, <strong>também sou aluno do curso.dev</strong> (do <a href="https://filipedeschamps.com.br/" target="blank">Filipe Deschamps</a>) desde o ano passado.
+        <p class="about-text-paragraph">Entrei no mercado de programação como <strong>Desenvolvedor Web</strong> em 2021 após dicidir mudar de carreira no ano anterior.</p>
+        <p class="about-text-paragraph">Atualmente <strong>estou cursando Análise e Desenvolvimento de Sistemas</strong> pela Uni Dom Bosco e <strong>possuo certificado em Desenvolvimento Web Full Stack Node</strong> pela <strong><a href="https://www.digitalhouse.com/br" target="_blank">Digital House</a></strong>.</p>
+        <p class="about-text-paragraph">Além da faculdade, <strong>também sou aluno do <a href="http://curso.dev" target="_blank">curso.dev</a></strong> do <strong><a href="https://filipedeschamps.com.br/" target="_blank">Filipe Deschamps</a></strong>.
         </p>
         <div class="warning">
           <small>Em breve contarei com mais detalhes sobre minha transição de carreira.</small>
