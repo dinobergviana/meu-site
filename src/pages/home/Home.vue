@@ -30,7 +30,7 @@
 </template>
 <script>
 
-import About from '../about/About.vue'
+import About from '../../components/about/About.vue'
 
 export default {
   name: 'HomePage',
