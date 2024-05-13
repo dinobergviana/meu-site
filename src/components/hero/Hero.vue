@@ -1,20 +1,34 @@
 <template>
-  <section>
-    <Hero />
-    <About />
+  <section class="hero-container">
+    <div>
+      <h1 class="title">Olá, eu sou Dinobergue Viana.</h1>
+    </div>
+    <div class="bio-description-container">
+      <span class="bio-description">Programador</span>
+    </div>
+    <div class="medias-container">
+      <a href="https://www.linkedin.com/in/dinobergue-viana-28574218b/" target="_blank" class="media-link">
+        <img src="../../assets/linkedin.svg" alt="">
+      </a>
+      <a href="https://github.com/dinobergviana" target="_blank" class="media-link">
+        <img src="../../assets/github.svg" alt="">
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5586998055574" target="_blank" class="media-link">
+        <img src="../../assets/whatsapp.svg" alt="">
+      </a>
+    </div>
+    <span class="description">Site em construção.</span>
+    <div class="navigate-down-container">
+      <a href="#about" class="navigate-down-button">
+        <img src="../../assets/arrow-down.svg" alt="">
+      </a>
+    </div>
   </section>
 </template>
 <script>
 
-import About from '../../components/about/About.vue'
-import Hero from '../../components/hero/Hero.vue'
-
 export default {
-  name: 'HomePage',
-  components: {
-    Hero,
-    About
-  }
+  name: 'Hero',
 }
 </script>
 
@@ -35,7 +49,7 @@ export default {
   }
 }
 
-.home-container {
+.hero-container {
   position: relative;
   min-height: 100vh;
   padding: 2em;
@@ -45,7 +59,7 @@ export default {
   justify-content: center;
 }
 
-.home-container div {
+.hero-container div {
   text-align: center;
 }
 
