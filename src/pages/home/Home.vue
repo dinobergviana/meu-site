@@ -4,12 +4,15 @@
     <About />
     <hr>
     <Experience />
+    <hr>
+    <Education />
   </section>
 </template>
 <script>
 
 import Hero from '../../components/hero/Hero.vue'
 import About from '../../components/about/About.vue'
+import Education from '../../components/education/Education.vue'
 
 import Experience from '../../components/experience/Experience.vue'
 
@@ -18,7 +21,8 @@ export default {
   components: {
     Hero,
     About,
-    Experience
+    Experience,
+    Education
   }
 }
 </script>

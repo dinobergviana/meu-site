@@ -8,14 +8,14 @@
         <h3 class="company-name">Educacros S.A</h3>
         <p class="job-rule">Desenvolvedor Frontend</p>
         <p>Set 2022 - Abr 2024</p>
-        <i>Trabalhei com: Vue.js, Bootstrap Vue, Vuexy</i>
+        <i>Trabalhei com: Vue.js, Vuex, Bootstrap Vue, Vuexy</i>
       </div>
       <hr class="divider">
       <div class="company-container">
         <h3 class="company-name">Warren Investimentos</h3>
         <p class="job-rule">Desenvolvedor Frontend</p>
         <p>Jan 2022 - Ago 2022</p>
-        <i>Trabalhei com: Vue.js</i>
+        <i>Trabalhei com: Vue.js, Nuxt, Testes Unitários</i>
       </div>
       <hr class="divider">
       <div class="company-container">
