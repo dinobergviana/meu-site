@@ -5,7 +5,14 @@
     </div>
     <div class="companies-container">
       <div class="company-container">
-        <h3 class="company-name">Educacros S.A</h3>
+        <h3 class="company-name">Enjoei</h3>
+        <p class="job-rule">Desenvolvedor Frontend</p>
+        <p>Mai 2024</p>
+        <i>Trabalho aqui atualmente</i>
+      </div>
+      <hr class="divider">
+      <div class="company-container">
+        <h3 class="company-name">Educacros</h3>
         <p class="job-rule">Desenvolvedor Frontend</p>
         <p>Set 2022 - Abr 2024</p>
         <i>Trabalhei com: Vue.js, Vuex, Bootstrap Vue, Vuexy</i>

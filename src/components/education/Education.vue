@@ -5,15 +5,15 @@
     </div>
     <div class="certificates-container">
       <div class="certificate-container">
-        <h3 class="certificate-name">Curso.dev</h3>
-        <p class="institution-name">Filipe Deschamps</p>
-        <p>Oct 2023 - em curso</p>
+        <h3 class="certificate-name">Analise e Desenvolvimento de Sistemas</h3>
+        <p class="institution-name">Uni Dom Bosco</p>
+        <i>Mai 2023 - em andamento</i>
       </div>
       <hr class="divider">
       <div class="certificate-container">
-        <h3 class="certificate-name">Analise e Desenvolvimento de Sistemas</h3>
-        <p class="institution-name">Uni Dom Bosco</p>
-        <i>Mai 2023 - em curso</i>
+        <h3 class="certificate-name">Curso.dev</h3>
+        <p class="institution-name">Filipe Deschamps</p>
+        <p>Oct 2023 - em andamento</p>
       </div>
       <hr class="divider">
       <div class="certificate-container">
