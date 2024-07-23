@@ -56,6 +56,7 @@ export default {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  background: var(--dark-800);
 }
 
 .hero-container div {

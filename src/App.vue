@@ -19,9 +19,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-  .main-container {
-    background: var(--dark-800);
-  }
-</style>

@@ -11,7 +11,9 @@
         <p class="about-text-paragraph">Além da faculdade, <strong>também sou aluno do <a href="http://curso.dev" target="_blank">curso.dev</a></strong> do <strong><a href="https://filipedeschamps.com.br/" target="_blank">Filipe Deschamps</a></strong>.
         </p>
         <div class="warning">
-          <small>Em breve contarei com mais detalhes como foi a minha transição de carreira.</small>
+          <small>
+            <router-link :to="{name: 'MyJourneyPartOne'}">Aqui eu conto com mais detalhes sobre minha jornada.</router-link>
+          </small>
         </div>
       </div>
     </div>

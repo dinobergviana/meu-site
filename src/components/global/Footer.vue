@@ -12,9 +12,7 @@ export default {
 </script>
 
 <style scoped>
-footer {
-  background: var(--white-100);
-}
+
 .footer-container {
   padding: 1em;
   text-align: center;
