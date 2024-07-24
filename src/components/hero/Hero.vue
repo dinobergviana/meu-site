@@ -1,7 +1,7 @@
 <template>
   <section class="hero-container">
     <div>
-      <h1 class="title">Olá, eu sou Dinobergue Viana.</h1>
+      <h1 class="title">{{ title }}</h1>
     </div>
     <div class="bio-description-container">
       <span class="bio-description">Programador</span>
@@ -25,9 +25,20 @@
   </section>
 </template>
 <script>
+import { mapState } from 'pinia'
+import { useGlobalState } from '../../stores/global-state'
+import { LANG } from '../../lang'
 
 export default {
   name: 'Hero',
+  computed: {
+    ...mapState(useGlobalState, {
+      lang: 'getLang',
+      title() {
+        return LANG[this.lang].mainTitle
+      }
+    }),
+  },
 }
 </script>
 
