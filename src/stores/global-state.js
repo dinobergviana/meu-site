@@ -6,11 +6,6 @@ export const useGlobalState = defineStore('globalState', {
       lang: 'pt'
     }
   },
-  actions: {
-    setLang(lang) {
-      this.lang = lang
-    }
-  },
   getters: {
     getLang() {
       return this.lang
