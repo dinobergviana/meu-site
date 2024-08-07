@@ -1,8 +1,10 @@
 export const LANG = {
   pt: {
-    mainTitle: 'Olá, eu sou Dinobergue Viana'
+    heroTitle: 'Olá, eu sou Dinobergue Viana',
+    heroRole: 'Programador'
   },
   en: {
-    mainTitle: 'Hi, my name is Dinobergue Viana'
+    heroTitle: 'Hi, my name is Dinobergue Viana',
+    heroRole: 'Programmer'
   },
 }

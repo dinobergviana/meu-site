@@ -4,7 +4,7 @@
       <h1 class="title">{{ title }}</h1>
     </div>
     <div class="bio-description-container">
-      <span class="bio-description">Programador</span>
+      <span class="bio-description">{{ role }}</span>
     </div>
     <div class="medias-container">
       <a href="https://www.linkedin.com/in/dinobergue-viana-28574218b/" target="_blank" class="media-link">
@@ -35,7 +35,10 @@ export default {
     ...mapState(useGlobalState, {
       lang: 'getLang',
       title() {
-        return LANG[this.lang].mainTitle
+        return LANG[this.lang].heroTitle
+      },
+      role() {
+        return LANG[this.lang].heroRole
       }
     }),
   },
