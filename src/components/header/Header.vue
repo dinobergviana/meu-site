@@ -33,7 +33,7 @@ export default {
   .language-container {
     display: flex;
     align-items: centers;
-    justify-content: end;
+    justify-content: flex-end;
     padding: 8px 16px;
   }
 
