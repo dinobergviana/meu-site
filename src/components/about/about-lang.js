@@ -10,7 +10,7 @@ export const ABOUT_LANG = {
     title: 'about me.',
     p1: 'I entered the programming market as a <strong>Web Developer</strong> in 2021 after deciding to change careers the previous year.',
     p2: 'I am currently <strong>studying Systems Analysis and Development</strong> at Uni Dom Bosco and <strong>hold a Full Stack Node Web Development</strong> certificate from <strong><a href="https://www.digitalhouse.com/br" target="_blank">Digital House</a></strong>.',
-    p3: 'In addition to college, <strong>I am also a student of</strong> <strong><a class="link" href="https://filipedeschamps.com.br/" target="_blank">Filipe Deschamps</a></strong> on <strong><a href="http://curso.dev" target="_blank">curso.dev</a></strong>.',
+    p3: 'In addition to college, <strong>I am also a student at <a href="http://curso.dev" target="_blank">curso.dev</a></strong> by <strong><a class="link" href="https://filipedeschamps.com.br/" target="_blank">Filipe Deschamps</a></strong>.',
     small: 'Soon, I will share more details about my career transition.'
   },
 }
