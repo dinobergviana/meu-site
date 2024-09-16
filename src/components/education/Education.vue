@@ -53,7 +53,6 @@ export default {
 .education-title {
   font-size: 3rem;
   color: var(--gray-600);
-  margin-bottom: 3rem;
 }
 
 .certificates-container {
@@ -100,15 +99,12 @@ hr {
   .education-container {
     display: flex;
     flex-direction: column;
-    padding: 1rem 4rem;
+    padding: 4rem;
   }
 
   .education-title-container {
     justify-content: center;
-  }
-
-  .education-title {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 }
 </style>

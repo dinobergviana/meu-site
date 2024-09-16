@@ -42,7 +42,7 @@ export default {
 .about-title {
   font-size: 3rem;
   color: var(--gray-600);
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .about-img-container img {
@@ -86,12 +86,12 @@ a:hover {
   .about-container {
     display: flex;
     flex-direction: column;
-    padding: 1rem 4rem;
+    padding: 4rem;
   }
 
   .about-img-container img {
     height: 200px;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   .about-title {

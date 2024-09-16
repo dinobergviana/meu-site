@@ -57,7 +57,6 @@ export default {
 .experience-title {
   font-size: 3rem;
   color: var(--gray-600);
-  margin-bottom: 3rem;
 }
 
 .companies-container {
@@ -104,15 +103,12 @@ hr {
   .experience-container {
     display: flex;
     flex-direction: column;
-    padding: 1rem 4rem;
+    padding: 4rem;
   }
 
   .experience-title-container {
     justify-content: center;
-  }
-
-  .experience-title {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 }
 </style>
