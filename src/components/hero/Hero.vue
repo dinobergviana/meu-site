@@ -27,7 +27,7 @@
 <script>
 import { mapState } from 'pinia'
 import { useGlobalState } from '../../stores/global-state'
-import { LANG } from '../../lang'
+import { HERO_LANG } from './hero-lang'
 
 export default {
   name: 'Hero',
@@ -35,10 +35,10 @@ export default {
     ...mapState(useGlobalState, {
       lang: 'getLang',
       title() {
-        return LANG[this.lang].heroTitle
+        return HERO_LANG[this.lang].heroTitle
       },
       role() {
-        return LANG[this.lang].heroRole
+        return HERO_LANG[this.lang].heroRole
       }
     }),
   },

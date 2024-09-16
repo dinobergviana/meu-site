@@ -1,4 +1,4 @@
-export const LANG = {
+export const HERO_LANG = {
   pt: {
     heroTitle: 'Olá, eu sou Dinobergue Viana',
     heroRole: 'Programador'
