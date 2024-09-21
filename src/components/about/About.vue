@@ -5,25 +5,48 @@
     </div>
     <div class="about-text-container">
       <div>
-        <h2 class="about-title">sobre mim.</h2>
-        <p class="about-text-paragraph">Entrei no mercado de programação como <strong>Desenvolvedor Web</strong> em 2021 após dicidir mudar de carreira no ano anterior.</p>
-        <p class="about-text-paragraph">Atualmente <strong>estou cursando Análise e Desenvolvimento de Sistemas</strong> pela Uni Dom Bosco e <strong>possuo certificado em Desenvolvimento Web Full Stack Node</strong> pela <strong><a href="https://www.digitalhouse.com/br" target="_blank">Digital House</a></strong>.</p>
-        <p class="about-text-paragraph">Além da faculdade, <strong>também sou aluno do <a href="http://curso.dev" target="_blank">curso.dev</a></strong> do <strong><a href="https://filipedeschamps.com.br/" target="_blank">Filipe Deschamps</a></strong>.
-        </p>
+        <h2 class="about-title">{{ title }}</h2>
+        <p class="about-text-paragraph" v-html="p1" />
+        <p class="about-text-paragraph" v-html="p2" />
+        <p class="about-text-paragraph" v-html="p3" />
         <div class="warning">
-          <small>Em breve contarei com mais detalhes como foi a minha transição de carreira.</small>
+          <small v-html="small" />
         </div>
       </div>
     </div>
   </section>
 </template>
 <script>
+import { mapState } from 'pinia'
+import { useGlobalState } from '../../stores/global-state'
+import { ABOUT_LANG } from './about-lang'
+
 export default {
   name: 'About',
+  computed: {
+    ...mapState(useGlobalState, {
+      lang: 'getLang',
+      title() {
+        return ABOUT_LANG[this.lang].title
+      },
+      p1() {
+        return ABOUT_LANG[this.lang].p1
+      },
+      p2() {
+        return ABOUT_LANG[this.lang].p2
+      },
+      p3() {
+        return ABOUT_LANG[this.lang].p3
+      },
+      small() {
+        return ABOUT_LANG[this.lang].small
+      }
+    }),
+  },
 }
 </script>
 
-<style scoped>
+<style>
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;

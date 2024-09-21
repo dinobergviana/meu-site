@@ -1,43 +1,37 @@
 <template>
   <section id="experience" class="experience-container">
     <div class="experience-title-container">
-      <h3 class="experience-title">experiências.</h3>
+      <h3 class="experience-title">{{ lang === 'pt' ? 'experiências.' : 'work expereiences.' }}</h3>
     </div>
     <div class="companies-container">
-      <div class="company-container">
-        <h3 class="company-name">Enjoei</h3>
-        <p class="job-rule">Desenvolvedor Frontend</p>
-        <p>Mai 2024</p>
-        <i>Trabalho aqui atualmente</i>
-      </div>
-      <hr class="divider">
-      <div class="company-container">
-        <h3 class="company-name">Educacros</h3>
-        <p class="job-rule">Desenvolvedor Frontend</p>
-        <p>Set 2022 - Abr 2024</p>
-        <i>Trabalhei com: Vue.js, Vuex, Bootstrap Vue, Vuexy</i>
-      </div>
-      <hr class="divider">
-      <div class="company-container">
-        <h3 class="company-name">Warren Investimentos</h3>
-        <p class="job-rule">Desenvolvedor Frontend</p>
-        <p>Jan 2022 - Ago 2022</p>
-        <i>Trabalhei com: Vue.js, Nuxt, Testes Unitários</i>
-      </div>
-      <hr class="divider">
-      <div class="company-container">
-        <h3 class="company-name">BoxTi</h3>
-        <p class="job-rule">Desenvolvedor</p>
-        <p>Mar 2021 - Dez 2021</p>
-        <i>Trabalhei com: HTML, CSS, Javascript, Vue.js, PHP, Node.js, MySQL</i>
+      <div v-for="job in jobs" :key="job.title" class="company-container">
+        <h3 class="company-name">{{ job.title }}</h3>
+        <p class="job-rule">{{ job.role }}</p>
+        <p>{{ job.period }}</p>
+        <span>{{ job.stacksText }}</span>
+        <i v-for="(stack, index) in job.stacks" :key="`${stack}-${index}`">
+          {{ stack }}
+        </i>
       </div>
     </div>
   </section>
 </template>
 <script>
+import { mapState } from 'pinia'
+import { useGlobalState } from '../../stores/global-state'
+import { EXPERIENCE_LANG } from './experience-lang'
 export default {
   name: 'Experience',
+  computed: {
+    ...mapState(useGlobalState, {
+      lang: 'getLang',
+      jobs() {
+        return EXPERIENCE_LANG[this.lang]
+      }
+    })
+  }
 }
+
 </script>
 
 <style scoped>

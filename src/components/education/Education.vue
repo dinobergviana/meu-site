@@ -1,38 +1,32 @@
 <template>
   <section id="education" class="education-container">
     <div class="education-title-container">
-      <h3 class="education-title">formação.</h3>
+      <h3 class="education-title">{{ lang === 'pt' ? 'formação.' : 'education.' }}</h3>
     </div>
     <div class="certificates-container">
-      <div class="certificate-container">
-        <h3 class="certificate-name">Analise e Desenvolvimento de Sistemas</h3>
-        <p class="institution-name">Uni Dom Bosco</p>
-        <i>Mai 2023 - em andamento</i>
-      </div>
-      <hr class="divider">
-      <div class="certificate-container">
-        <h3 class="certificate-name">Curso.dev</h3>
-        <p class="institution-name">Filipe Deschamps</p>
-        <p>Oct 2023 - em andamento</p>
-      </div>
-      <hr class="divider">
-      <div class="certificate-container">
-        <h3 class="certificate-name">Desenvolvimento Full Stack - Node.js</h3>
-        <p class="institution-name">Digital House</p>
-        <i>Jun 2020 - Jan 2021</i>
-      </div>
-      <hr class="divider">
-      <div class="certificate-container">
-        <h3 class="certificate-name">Música</h3>
-        <p class="institution-name">UFMG</p>
-        <i>Mar 2015 - Jul 2019</i>
+      <div v-for="ed in education" :key="ed.title" class="certificate-container">
+        <h3 class="certificate-name">{{ ed.title }}</h3>
+        <p class="institution-name">{{ ed.institution }}</p>
+        <span>{{ ed.period }}</span>
       </div>
     </div>
   </section>
 </template>
 <script>
+  import { mapState } from 'pinia'
+  import { useGlobalState } from '../../stores/global-state'
+  import { EDUCATION_LANG } from './education-lang'
+
 export default {
   name: 'education',
+  computed: {
+    ...mapState(useGlobalState, {
+      lang: 'getLang',
+      education() {
+        return EDUCATION_LANG[this.lang]
+      },
+    }),
+  },
 }
 </script>
 

@@ -1,5 +1,6 @@
 <template>
   <section>
+    <MainHeader />
     <Hero />
     <About />
     <hr>
@@ -10,6 +11,7 @@
 </template>
 <script>
 
+import MainHeader from '../../components/header/Header.vue'
 import Hero from '../../components/hero/Hero.vue'
 import About from '../../components/about/About.vue'
 import Education from '../../components/education/Education.vue'
@@ -19,6 +21,7 @@ import Experience from '../../components/experience/Experience.vue'
 export default {
   name: 'HomePage',
   components: {
+    MainHeader,
     Hero,
     About,
     Experience,
