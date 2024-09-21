@@ -1,7 +1,7 @@
 <template>
   <section id="experience" class="experience-container">
     <div class="experience-title-container">
-      <h3 class="experience-title">experiências.</h3>
+      <h3 class="experience-title">{{ lang === 'pt' ? 'experiências.' : 'work expereiences.' }}</h3>
     </div>
     <div class="companies-container">
       <div v-for="job in jobs" :key="job.title" class="company-container">
