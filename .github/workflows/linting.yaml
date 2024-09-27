@@ -5,14 +5,14 @@ on: pull_request
 jobs:
   prettier:
     name: Prettier
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "lts/hydrogen"
+          node-version: "lts/gallium"
 
-      - run: npm ci
+      - run: yarn install
 
-      - run: npm run lint:prettier:check
+      - run: yarn lint:prettier:check
