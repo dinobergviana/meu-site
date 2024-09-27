@@ -7,42 +7,54 @@
       <span class="bio-description">{{ role }}</span>
     </div>
     <div class="medias-container">
-      <a href="https://www.linkedin.com/in/dinobergue-viana-28574218b/" target="_blank" class="media-link">
-        <img src="../../assets/linkedin.svg" alt="">
+      <a
+        href="https://www.linkedin.com/in/dinobergue-viana-28574218b/"
+        target="_blank"
+        class="media-link"
+      >
+        <img src="../../assets/linkedin.svg" alt="" />
       </a>
-      <a href="https://github.com/dinobergviana" target="_blank" class="media-link">
-        <img src="../../assets/github.svg" alt="">
+      <a
+        href="https://github.com/dinobergviana"
+        target="_blank"
+        class="media-link"
+      >
+        <img src="../../assets/github.svg" alt="" />
       </a>
-      <a href="https://api.whatsapp.com/send?phone=5586998055574" target="_blank" class="media-link">
-        <img src="../../assets/whatsapp.svg" alt="">
+      <a
+        href="https://api.whatsapp.com/send?phone=5586998055574"
+        target="_blank"
+        class="media-link"
+      >
+        <img src="../../assets/whatsapp.svg" alt="" />
       </a>
     </div>
     <div class="navigate-down-container">
       <a href="#about" class="navigate-down-button">
-        <img src="../../assets/arrow-down.svg" alt="">
+        <img src="../../assets/arrow-down.svg" alt="" />
       </a>
     </div>
   </section>
 </template>
 <script>
-import { mapState } from 'pinia'
-import { useGlobalState } from '../../stores/global-state'
-import { HERO_LANG } from './hero-lang'
+import { mapState } from "pinia";
+import { useGlobalState } from "../../stores/global-state";
+import { HERO_LANG } from "./hero-lang";
 
 export default {
-  name: 'Hero',
+  name: "Hero",
   computed: {
     ...mapState(useGlobalState, {
-      lang: 'getLang',
+      lang: "getLang",
       title() {
-        return HERO_LANG[this.lang].heroTitle
+        return HERO_LANG[this.lang].heroTitle;
       },
       role() {
-        return HERO_LANG[this.lang].heroRole
-      }
+        return HERO_LANG[this.lang].heroRole;
+      },
     }),
   },
-}
+};
 </script>
 
 <style scoped>
