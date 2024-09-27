@@ -1,10 +1,16 @@
 <template>
   <section id="education" class="education-container">
     <div class="education-title-container">
-      <h3 class="education-title">{{ lang === 'pt' ? 'formação.' : 'education.' }}</h3>
+      <h3 class="education-title">
+        {{ lang === "pt" ? "formação." : "education." }}
+      </h3>
     </div>
     <div class="certificates-container">
-      <div v-for="ed in education" :key="ed.title" class="certificate-container">
+      <div
+        v-for="ed in education"
+        :key="ed.title"
+        class="certificate-container"
+      >
         <h3 class="certificate-name">{{ ed.title }}</h3>
         <p class="institution-name">{{ ed.institution }}</p>
         <span>{{ ed.period }}</span>
@@ -13,21 +19,21 @@
   </section>
 </template>
 <script>
-  import { mapState } from 'pinia'
-  import { useGlobalState } from '../../stores/global-state'
-  import { EDUCATION_LANG } from './education-lang'
+import { mapState } from "pinia";
+import { useGlobalState } from "../../stores/global-state";
+import { EDUCATION_LANG } from "./education-lang";
 
 export default {
-  name: 'education',
+  name: "education",
   computed: {
     ...mapState(useGlobalState, {
-      lang: 'getLang',
+      lang: "getLang",
       education() {
-        return EDUCATION_LANG[this.lang]
+        return EDUCATION_LANG[this.lang];
       },
     }),
   },
-}
+};
 </script>
 
 <style scoped>

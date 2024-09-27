@@ -1,14 +1,14 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-export const useGlobalState = defineStore('globalState', {
+export const useGlobalState = defineStore("globalState", {
   state() {
     return {
-      lang: 'pt'
-    }
+      lang: "pt",
+    };
   },
   getters: {
     getLang() {
-      return this.lang
-    }
-  }
-})
+      return this.lang;
+    },
+  },
+});

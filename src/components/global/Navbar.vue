@@ -1,8 +1,8 @@
 <template>
   <header>
-    <router-link :to="{name: 'Home'}" class="router-link">
+    <router-link :to="{ name: 'Home' }" class="router-link">
       <div class="header-content">
-        <img src="../assets/keyboard.svg" alt="">
+        <img src="../assets/keyboard.svg" alt="" />
         <span class="link-label">dinobergueviana</span>
       </div>
     </router-link>
@@ -10,10 +10,9 @@
 </template>
 
 <script>
-
 export default {
-  name: 'Navbar',
-}
+  name: "Navbar",
+};
 </script>
 
 <style scoped>
@@ -31,7 +30,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .5em;
+  gap: 0.5em;
 }
 
 .router-link {

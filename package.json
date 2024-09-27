@@ -3,7 +3,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write ."
   },
   "engines": {
     "node": "16.x"
@@ -21,7 +22,8 @@
     "@vue/cli-service": "~5.0.8",
     "@vue/compiler-sfc": "^3.3.4",
     "eslint": "^8.4.1",
-    "eslint-plugin-vue": "^9.14.0"
+    "eslint-plugin-vue": "^9.14.0",
+    "prettier": "^3.3.3"
   },
   "eslintConfig": {
     "root": true,

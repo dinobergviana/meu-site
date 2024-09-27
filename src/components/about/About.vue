@@ -1,7 +1,7 @@
 <template>
   <section id="about" class="about-container">
     <div class="about-img-container">
-      <img src="../../assets/images/profile.png" alt="">
+      <img src="../../assets/images/profile.png" alt="" />
     </div>
     <div class="about-text-container">
       <div>
@@ -17,33 +17,33 @@
   </section>
 </template>
 <script>
-import { mapState } from 'pinia'
-import { useGlobalState } from '../../stores/global-state'
-import { ABOUT_LANG } from './about-lang'
+import { mapState } from "pinia";
+import { useGlobalState } from "../../stores/global-state";
+import { ABOUT_LANG } from "./about-lang";
 
 export default {
-  name: 'About',
+  name: "About",
   computed: {
     ...mapState(useGlobalState, {
-      lang: 'getLang',
+      lang: "getLang",
       title() {
-        return ABOUT_LANG[this.lang].title
+        return ABOUT_LANG[this.lang].title;
       },
       p1() {
-        return ABOUT_LANG[this.lang].p1
+        return ABOUT_LANG[this.lang].p1;
       },
       p2() {
-        return ABOUT_LANG[this.lang].p2
+        return ABOUT_LANG[this.lang].p2;
       },
       p3() {
-        return ABOUT_LANG[this.lang].p3
+        return ABOUT_LANG[this.lang].p3;
       },
       small() {
-        return ABOUT_LANG[this.lang].small
-      }
+        return ABOUT_LANG[this.lang].small;
+      },
     }),
   },
-}
+};
 </script>
 
 <style>
