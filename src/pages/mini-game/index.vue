@@ -32,10 +32,10 @@
   .game-wrapper {
     width: 500px;
     margin: 0 auto;
-    border: 1px solid var(--gray-100);
     display: flex;
     justify-content: space-evenly;
     padding: 20px 0;
+    border-radius: 8px;
   }
 
   .column {
@@ -50,6 +50,8 @@
     border: 0;
     font-size: 1.5rem;
     color: var(--gray-400);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0) 0px 7px 13px -3px, rgba(0, 0, 0, 0.1) 0px -4px 0px inset;
   }
 
   .word-button + .word-button  {
