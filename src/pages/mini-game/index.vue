@@ -13,7 +13,7 @@
 
 <script setup>
   import { ref } from "vue"
-import WordButton from "./components/WordButton.vue"
+  import WordButton from "./components/WordButton.vue"
 
   const leftWords = ref([
     {
