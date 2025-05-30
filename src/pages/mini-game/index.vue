@@ -136,6 +136,11 @@ function handleButtonPressed(selectedWord) {
 }
 
 function markLeftWord(word) {
+  if (!word.selected) {
+    leftWordSelected.value = null;
+    return;
+  }
+
   if (leftWordSelected.value) {
     if (word.lang === leftWordSelected.value.lang) {
       leftWords.value = leftWords.value.map((item) => {
@@ -152,6 +157,11 @@ function markLeftWord(word) {
 }
 
 function markRightWord(word) {
+  if (!word.selected) {
+    rightWordSelected.value = null;
+    return;
+  }
+
   if (rightWordSelected.value) {
     if (word.lang === rightWordSelected.value.lang) {
       rightWords.value = rightWords.value.map((item) => {
