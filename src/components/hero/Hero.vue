@@ -135,7 +135,7 @@ export default {
 
 .navigate-down-container {
   position: absolute;
-  bottom: 1em;
+  bottom: 3.2rem;
   animation: go-back 1s;
 }
 
