@@ -12,14 +12,12 @@
     :disabled="word.disabled"
     @click="emitPressed(word)"
   >
-    {{ wordSanitized }}
+    {{ word.label }}
   </button>
 </template>
 
 <script setup>
-import { computed } from "vue";
-
-const props = defineProps({
+defineProps({
   word: {
     type: Object,
     required: true,
@@ -27,8 +25,6 @@ const props = defineProps({
 });
 
 const emit = defineEmits(["pressed"]);
-
-const wordSanitized = computed(() => props.word.label.replace(/\d+/g, ""));
 
 function emitPressed(word) {
   if (!word.disabled) {

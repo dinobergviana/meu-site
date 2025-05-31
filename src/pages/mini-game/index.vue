@@ -22,11 +22,29 @@
 </template>
 
 <script setup>
+import { watch } from "vue"
+
+import confetti from 'canvas-confetti'
+
 import WordButton from "./components/WordButton.vue";
 
 import { useMiniGame } from "./composables/mini-game.js";
 
-const { leftWords, rightWords, handleButtonPressed } = useMiniGame();
+const { leftWords, rightWords, handleButtonPressed, win } = useMiniGame();
+
+const startConfetti = () => {
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.9 }
+  })
+}
+
+watch(win, (newWin) => {
+  if (newWin) {
+    startConfetti();
+  }
+});
 </script>
 
 <style scoped>

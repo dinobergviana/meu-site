@@ -12,6 +12,8 @@ export function useMiniGame() {
   const leftWordSelected = ref(null);
   const rightWordSelected = ref(null);
 
+  const win = ref(false)
+
   function handleButtonPressed(selectedWord) {
     selectedWord.selected = !selectedWord.selected;
 
@@ -133,10 +135,21 @@ export function useMiniGame() {
 
     leftWordSelected.value = null;
     rightWordSelected.value = null;
+
+    checkWin()
+  }
+
+  function checkWin() {
+    const left = leftWords.value.filter((item) => item.matched)
+    const right = rightWords.value.filter((item) => item.matched)
+
+    if (left.length === 5 && right.length === 5) {
+      win.value = true
+    }
   }
 
   function getRandomIndex() {
-    return Math.floor(Math.random() * 500);
+    return Math.floor(Math.random() * 48);
   }
 
   onMounted(() => {
@@ -154,6 +167,7 @@ export function useMiniGame() {
   return {
     leftWords,
     rightWords,
+    win,
     handleButtonPressed,
   };
 }
