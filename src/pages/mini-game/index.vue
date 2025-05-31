@@ -135,14 +135,14 @@ function handleButtonPressed(selectedWord) {
   }
 }
 
-function markLeftWord(word) {
-  if (!word.selected) {
+function markLeftWord(leftWord) {
+  if (!leftWord.selected) {
     leftWordSelected.value = null;
     return;
   }
 
   if (leftWordSelected.value) {
-    if (word.lang === leftWordSelected.value.lang) {
+    if (leftWord.lang === leftWordSelected.value.lang) {
       leftWords.value = leftWords.value.map((item) => {
         if (item.id === leftWordSelected.value.id) {
           item.selected = false;
@@ -153,17 +153,21 @@ function markLeftWord(word) {
     }
   }
 
-  leftWordSelected.value = word;
+  leftWordSelected.value = leftWord;
+
+  if (rightWordSelected.value) {
+    checkTraductionMatch(leftWord, rightWordSelected.value);
+  }
 }
 
-function markRightWord(word) {
-  if (!word.selected) {
+function markRightWord(rightWord) {
+  if (!rightWord.selected) {
     rightWordSelected.value = null;
     return;
   }
 
   if (rightWordSelected.value) {
-    if (word.lang === rightWordSelected.value.lang) {
+    if (rightWord.lang === rightWordSelected.value.lang) {
       rightWords.value = rightWords.value.map((item) => {
         if (item.id === rightWordSelected.value.id) {
           item.selected = false;
@@ -174,7 +178,74 @@ function markRightWord(word) {
     }
   }
 
-  rightWordSelected.value = word;
+  rightWordSelected.value = rightWord;
+
+  if (leftWordSelected.value) {
+    checkTraductionMatch(leftWordSelected.value, rightWord);
+  }
+}
+
+function checkTraductionMatch(leftWord, rightWord) {
+  if (leftWord.lang_id === rightWord.lang_id) {
+    leftWords.value = leftWords.value.map((item) => {
+      if (item.id === leftWord.id) {
+        item.selected = false;
+        item.matched = true;
+        item.animate = true;
+
+        setTimeout(() => {
+          item.disabled = true;
+        }, 500);
+      }
+
+      return item;
+    });
+
+    rightWords.value = rightWords.value.map((item) => {
+      if (item.id === rightWord.id) {
+        item.selected = false;
+        item.matched = true;
+        item.animate = true;
+
+        setTimeout(() => {
+          item.disabled = true;
+        }, 500);
+      }
+
+      return item;
+    });
+  } else {
+    leftWords.value = leftWords.value.map((item) => {
+      if (item.id === leftWord.id) {
+        item.selected = false;
+        item.error = true;
+        item.animate = true;
+
+        setTimeout(() => {
+          item.disabled = true;
+        }, 500);
+      }
+
+      return item;
+    });
+
+    rightWords.value = rightWords.value.map((item) => {
+      if (item.id === rightWord.id) {
+        item.selected = false;
+        item.error = true;
+        item.animate = true;
+
+        setTimeout(() => {
+          item.disabled = true;
+        }, 500);
+      }
+
+      return item;
+    });
+  }
+
+  leftWordSelected.value = null;
+  rightWordSelected.value = null;
 }
 
 onMounted(() => {
