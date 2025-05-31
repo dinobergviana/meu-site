@@ -1,101 +1,13 @@
 import { onMounted, ref } from "vue";
 
+import { en } from "../consts/en.js";
+import { pt } from "../consts/pt.js";
+
 import { shuffleArray } from "../utils/shuffle-array.js";
 
 export function useMiniGame() {
-  const leftWords = ref([
-    {
-      id: 1,
-      label: "fruta",
-      lang_id: 1,
-      matched: false,
-      error: false,
-      selected: false,
-      used: false,
-      disabled: false,
-      lang: "pt",
-    },
-    {
-      id: 2,
-      label: "pão",
-      lang_id: 2,
-      matched: false,
-      error: false,
-      selected: false,
-      used: false,
-      disabled: false,
-      lang: "pt",
-    },
-    {
-      id: 3,
-      label: "aula",
-      lang_id: 3,
-      matched: false,
-      error: false,
-      selected: false,
-      used: false,
-      disabled: false,
-      lang: "pt",
-    },
-    {
-      id: 4,
-      label: "corda",
-      lang_id: 4,
-      matched: false,
-      error: false,
-      selected: false,
-      used: false,
-      disabled: false,
-      lang: "pt",
-    },
-  ]);
-
-  const rightWords = ref([
-    {
-      id: 1,
-      label: "fruit",
-      lang_id: 1,
-      matched: false,
-      error: false,
-      selected: false,
-      used: false,
-      disabled: false,
-      lang: "en",
-    },
-    {
-      id: 2,
-      label: "bread",
-      lang_id: 2,
-      matched: false,
-      error: false,
-      selected: false,
-      used: false,
-      disabled: false,
-      lang: "en",
-    },
-    {
-      id: 3,
-      label: "class",
-      lang_id: 3,
-      matched: false,
-      error: false,
-      selected: false,
-      used: false,
-      disabled: false,
-      lang: "en",
-    },
-    {
-      id: 4,
-      label: "string",
-      lang_id: 4,
-      matched: false,
-      error: false,
-      selected: false,
-      used: false,
-      disabled: false,
-      lang: "en",
-    },
-  ]);
+  const leftWords = ref([]);
+  const rightWords = ref([]);
 
   const leftWordSelected = ref(null);
   const rightWordSelected = ref(null);
@@ -161,7 +73,7 @@ export function useMiniGame() {
   }
 
   function checkTraductionMatch(leftWord, rightWord) {
-    if (leftWord.lang_id === rightWord.lang_id) {
+    if (leftWord.traduction_id === rightWord.traduction_id) {
       leftWords.value = leftWords.value.map((item) => {
         if (item.id === leftWord.id) {
           item.selected = false;
@@ -223,7 +135,18 @@ export function useMiniGame() {
     rightWordSelected.value = null;
   }
 
+  function getRandomIndex() {
+    return Math.floor(Math.random() * 500);
+  }
+
   onMounted(() => {
+    while (leftWords.value.length < 5) {
+      const index = getRandomIndex();
+
+      leftWords.value.push(pt[index]);
+      rightWords.value.push(en[index]);
+    }
+
     leftWords.value = shuffleArray(leftWords.value);
     rightWords.value = shuffleArray(rightWords.value);
   });
