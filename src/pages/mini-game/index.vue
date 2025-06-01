@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div class="title-container">
+      <h1>Encontre as palavras que combinam!</h1>
+    </div>
+
     <div class="container">
       <div class="game-wrapper">
         <div class="column">
@@ -54,11 +58,22 @@ watch(win, (newWin) => {
 </script>
 
 <style scoped>
+.title-container {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  color: red;
+  font-size: 1rem;
+}
+
 .container {
-  min-height: calc(91vh);
+  min-height: calc(100vh - 90px);
   background: var(--white);
   display: flex;
   align-items: center;
+  align-items: flex-start;
 }
 
 .game-wrapper {
