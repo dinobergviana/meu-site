@@ -80,6 +80,7 @@ export function useMiniGame() {
         if (item.id === leftWord.id) {
           item.selected = false;
           item.matched = true;
+          item.used = true;
           item.animate = true;
 
           setTimeout(() => {
@@ -94,6 +95,7 @@ export function useMiniGame() {
         if (item.id === rightWord.id) {
           item.selected = false;
           item.matched = true;
+          item.used = true;
           item.animate = true;
 
           setTimeout(() => {
@@ -108,6 +110,7 @@ export function useMiniGame() {
         if (item.id === leftWord.id) {
           item.selected = false;
           item.error = true;
+          item.used = true;
           item.animate = true;
 
           setTimeout(() => {
@@ -122,6 +125,7 @@ export function useMiniGame() {
         if (item.id === rightWord.id) {
           item.selected = false;
           item.error = true;
+          item.used = true;
           item.animate = true;
 
           setTimeout(() => {
@@ -143,7 +147,7 @@ export function useMiniGame() {
     const left = leftWords.value.filter((item) => item.matched)
     const right = rightWords.value.filter((item) => item.matched)
 
-    if (left.length === 5 && right.length === 5) {
+    if (left.length === 4 && right.length === 4) {
       win.value = true
     }
   }
@@ -152,16 +156,41 @@ export function useMiniGame() {
     return Math.floor(Math.random() * 48);
   }
 
-  onMounted(() => {
-    while (leftWords.value.length < 5) {
+  function generateRandomWords() {
+    while (leftWords.value.length < 4) {
       const index = getRandomIndex();
 
+      if (pt[index].used || en[index].used) {
+        continue;
+      }
+      
+      const leftWordAlreadyInUse = leftWords.value.find((item) => item.id === pt[index].id);
+      const rightWordAlreadyInUse = rightWords.value.find((item) => item.id === en[index].id);
+
+      if (leftWordAlreadyInUse || rightWordAlreadyInUse) {
+        continue;
+      }
+  
       leftWords.value.push(pt[index]);
       rightWords.value.push(en[index]);
     }
-
+  
     leftWords.value = shuffleArray(leftWords.value);
     rightWords.value = shuffleArray(rightWords.value);
+  }
+
+  function resetGame() {
+    leftWords.value = [];
+    rightWords.value = [];
+    leftWordSelected.value = null;
+    rightWordSelected.value = null;
+    win.value = false;
+
+    generateRandomWords()
+  }
+
+  onMounted(() => {
+    generateRandomWords()
   });
 
   return {
@@ -169,5 +198,6 @@ export function useMiniGame() {
     rightWords,
     win,
     handleButtonPressed,
+    resetGame
   };
 }

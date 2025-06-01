@@ -1,22 +1,28 @@
 <template>
-  <div class="container">
-    <div class="game-wrapper">
-      <div class="column">
-        <WordButton
-          v-for="word in leftWords"
-          :word="word"
-          :key="`left-${word.id}`"
-          @pressed="handleButtonPressed"
-        />
+  <div>
+    <div class="container">
+      <div class="game-wrapper">
+        <div class="column">
+          <WordButton
+            v-for="word in leftWords"
+            :word="word"
+            :key="`left-${word.id}`"
+            @pressed="handleButtonPressed"
+          />
+        </div>
+        <div class="column">
+          <WordButton
+            v-for="word in rightWords"
+            :word="word"
+            :key="`right-${word.id}`"
+            @pressed="handleButtonPressed"
+          />
+        </div>
       </div>
-      <div class="column">
-        <WordButton
-          v-for="word in rightWords"
-          :word="word"
-          :key="`right-${word.id}`"
-          @pressed="handleButtonPressed"
-        />
-      </div>
+    </div>
+
+    <div class="actions">
+      <button type="button" @click="resetGame">Resetar</button>
     </div>
   </div>
 </template>
@@ -30,7 +36,7 @@ import WordButton from "./components/WordButton.vue";
 
 import { useMiniGame } from "./composables/mini-game.js";
 
-const { leftWords, rightWords, handleButtonPressed, win } = useMiniGame();
+const { leftWords, rightWords, win, handleButtonPressed, resetGame } = useMiniGame();
 
 const startConfetti = () => {
   confetti({
@@ -49,7 +55,7 @@ watch(win, (newWin) => {
 
 <style scoped>
 .container {
-  min-height: calc(100vh - 50px);
+  min-height: calc(91vh);
   background: var(--white);
   display: flex;
   align-items: center;
@@ -60,7 +66,6 @@ watch(win, (newWin) => {
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
-  padding: 20px 0;
   border-radius: 8px;
 }
 
@@ -68,6 +73,13 @@ watch(win, (newWin) => {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
 }
 
 @media (max-width: 425px) {
