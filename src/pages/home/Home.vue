@@ -7,6 +7,8 @@
     <Experience />
     <hr />
     <Education />
+    <hr />
+    <Projects />
   </section>
 </template>
 <script>
@@ -14,8 +16,8 @@ import MainHeader from "../../components/header/Header.vue";
 import Hero from "../../components/hero/Hero.vue";
 import About from "../../components/about/About.vue";
 import Education from "../../components/education/Education.vue";
-
 import Experience from "../../components/experience/Experience.vue";
+import Projects from "../../components/projects/Projects.vue";
 
 export default {
   name: "HomePage",
@@ -25,6 +27,7 @@ export default {
     About,
     Experience,
     Education,
+    Projects
   },
 };
 </script>

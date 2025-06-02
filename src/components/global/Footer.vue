@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="footer-container">
-      <span>&#169; 2024 Dinobergue Viana</span>
+      <span>&#169; 2025 Dinobergue Viana</span>
     </div>
   </footer>
 </template>
