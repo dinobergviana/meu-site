@@ -101,7 +101,7 @@ hr {
 }
 
 @media (max-width: 840px) {
-  .project-container {
+  .projects-container {
     display: flex;
     flex-direction: column;
     padding: 4rem;
