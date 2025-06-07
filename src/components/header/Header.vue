@@ -5,7 +5,6 @@
       v-model="selectedLang"
       class="language-select"
       @change="setLanguage"
-      @click="switchLanguage(selectedLang)"
     >
       <option class="language-select-option" value="pt">BR</option>
       <option class="language-select-option" value="en">EN</option>
@@ -14,15 +13,19 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 
 const { locale } = useI18n();
 
 const selectedLang = ref(locale.value);
 
-function switchLanguage(lang) {
-  locale.value = lang;
+watch(selectedLang, () => {
+  switchLanguage()
+})
+
+function switchLanguage() {
+  locale.value = selectedLang.value;
 }
 </script>
 
