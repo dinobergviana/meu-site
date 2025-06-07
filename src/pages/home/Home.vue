@@ -27,7 +27,7 @@ export default {
     About,
     Experience,
     Education,
-    Projects
+    Projects,
   },
 };
 </script>

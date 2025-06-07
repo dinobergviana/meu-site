@@ -9,7 +9,7 @@ const routes = [
     name: "Home",
     component: HomePage,
   },
-    {
+  {
     path: "/projects/gc-manager",
     name: "GCManagerPage",
     component: GCManagerPage,
