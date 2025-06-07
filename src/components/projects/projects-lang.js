@@ -8,8 +8,8 @@ export const PROJECTS_LANG = {
       url: "/projects/gc-manager",
     },
     {
-      title: "Meu Site Pessoal",
-      description: "Um site pessoal para compartilhar informações e projetos.",
+      title: "Meu Site",
+      description: "Site pessoal para compartilhar informações sobre minha carreira e projetos.",
       status: "Finalizado",
       linkLabel: null,
       url: null,
@@ -24,8 +24,8 @@ export const PROJECTS_LANG = {
       url: "/projects/gc-manager",
     },
     {
-      title: "My Personal Website",
-      description: "A personal website to share information and projects.",
+      title: "My Website",
+      description: "A personal website to share information about my career and projects.",
       status: "Completed",
       linkLabel: null,
       url: null,
