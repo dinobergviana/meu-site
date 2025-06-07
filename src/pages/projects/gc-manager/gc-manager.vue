@@ -1,84 +1,51 @@
 <template>
   <section class="container">
     <div class="content">
-      <h1 class="title">GC Manager</h1>
+      <h1 class="title">{{ t("projects.gcManager.pageTitle") }}</h1>
       <article>
-        <h2>Como esse projeto nasceu?</h2>
+        <h2>{{ t("projects.gcManager.articleOneTitle") }}</h2>
         <p>
-          Uma prática muito comum na vida de Igreja é o fato de seus membros se
-          reunirem em pequenos grupos com a finalidade de se relacionarem,
-          compartilhar experiencias, aprenderem sobre Deus, entre outras coisas.
-          À medida que a Igreja cresce, faz-se necessário gerenciar esses grupos
-          de alguma forma e a mais comum delas é utilizar uma planilha.
+          {{ t("projects.gcManager.articleOne") }}
         </p>
       </article>
 
       <article>
         <p>
-          O GC Manager é uma aplicação web que visa facilitar o gerenciamento
-          dos
-          <a
-            href="https://www.angelim.org/grupos-de-crescimento"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Grupos de Crescimento</a
-          >
-          da
-          <a
-            href="https://www.angelim.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Igreja Angelim Teresina</a
-          >
-          e seus Campus, possibilitando a criação, edição e exclusão de grupos,
-          criação de usuários, controle de acesso via permições, etc.
+          {{ t("projects.gcManager.articleTwo") }}
         </p>
       </article>
 
       <article>
         <p>
-          Uma das principais funcionalidades desse sistema é a possibilidade de
-          gerar banners com as informações de um GC. Há não muito tempo atrás
-          esse trabalho era feito utilizando a ferramenta online
+          {{ t("projects.gcManager.articleThreePartOne") }}
           <a
             href="https://www.canva.com/"
             target="_blank"
             rel="noopener noreferrer"
-            >Canvas</a
+            >Canva</a
           >
-          e todas as informações eram inseridas manualmente, o que levava cerca
-          de 8 minutos para ficar pronto. O trabalho era: conferir os dados do
-          GC em uma planilha (previamente preenchida), adicionar as informações
-          no template e baixar o banner.
+          {{ t("projects.gcManager.articleThreePartTwo") }}
         </p>
       </article>
 
       <article>
         <p>
-          Posteriormente, quando assumi a responsabilidade por atualizar as
-          informações dos GC's e gerar os banners, criei um script utilizando
-          Javascript e o tempo para gerar um único banner caiu para menos de 1
-          segundo! O script buscava as informações do GC em um arquivo
-          <i>.csv</i> exportado a partir de uma planilha do Google Sheets e
-          gerava a imagem utilizando a lib
+          {{ t("projects.gcManager.articleFourPartOne") }}
+          <i>.csv</i>
+          {{ t("projects.gcManager.articleFourPartTwo") }}
           <a
             href="https://www.npmjs.com/package/canvas/v/2.0.0-alpha.7"
             target="_blank"
             rel="noopener noreferrer"
             >node-canvas</a
           >
-          junto o módulo File system do Node.js. Esse mini projeto reduziu
-          significativamente o tempo gasto quando precisava gerar banners em
-          massa e foi utilizado durante muito tempo.
+          {{ t("projects.gcManager.articleFourPartThree") }}
         </p>
       </article>
 
       <article>
         <p>
-          Isso resolveu apenas uma parte do problema, agora, é necessário que
-          outras pessoas realizem esse gerenciamento, daí a necessidade de um
-          sistema que facilite esse trabalho e que esteja disponível, de
-          preferencia na internet.
+          {{ t("projects.gcManager.articleFive") }}
         </p>
       </article>
 
@@ -274,6 +241,10 @@
 
 <script setup>
 import { onMounted } from "vue";
+
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 window.scrollTo(0, 0);
 

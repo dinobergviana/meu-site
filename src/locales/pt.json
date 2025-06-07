@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "gcManager": {
+      "pageTitle": "Gerenciador de GC",
+      "articleOneTitle": "Como esse projeto nasceu?",
+      "articleOne": "Uma prática muito comum na vida de Igreja é o fato de seus membros se reunirem em pequenos grupos com a finalidade de se relacionarem, compartilhar experiencias, aprenderem sobre Deus, entre outras coisas. À medida que a Igreja cresce, faz-se necessário gerenciar esses grupos de alguma forma e a mais comum delas é utilizar uma planilha.",
+      "articleTwo": "O Gerenciador de GC é uma aplicação web que visa facilitar o gerenciamento dos Grupos de Crescimento da Igreja Angelim Teresina e seus Campus, possibilitando a criação, edição e exclusão de grupos, criação de usuários, controle de acesso via permições, etc.",
+      "articleThreePartOne": "Uma das principais funcionalidades desse sistema é a possibilidade de gerar banners com as informações de um GC. Há não muito tempo atrás esse trabalho era feito utilizando a ferramenta online ",
+      "articleThreePartTwo": "e todas as informações eram inseridas manualmente, o que levava cerca de 8 minutos para ficar pronto. O trabalho era: conferir os dados do GC em uma planilha (previamente preenchida), adicionar as informações no template e baixar o banner.",
+      "articleFourPartOne": "Posteriormente, quando assumi a responsabilidade por atualizar as informações dos GC's e gerar os banners, criei um script utilizando Javascript e o tempo para gerar um único banner caiu para menos de 1 segundo! O script buscava as informações do GC em um arquivo ",
+      "articleFourPartTwo": "exportado a partir de uma planilha do Google Sheets e gerava a imagem utilizando a lib",
+      "articleFourPartThree": "junto o módulo File system do Node.js. Esse mini projeto reduziu significativamente o tempo gasto quando precisava gerar banners em massa e foi utilizado durante muito tempo.",
+      "articleFive": "Isso resolveu apenas uma parte do problema. Agora, é necessário que outras pessoas realizem esse gerenciamento, daí a necessidade de um sistema que facilite esse trabalho e que esteja disponível, de preferencia na internet."
+    }
+  }
+}

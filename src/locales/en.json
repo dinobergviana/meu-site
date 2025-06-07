@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "gcManager": {
+      "pageTitle": "GC Manager",
+      "articleOneTitle": "How did this project start?",
+      "articleOne": "A very common practice in church life is that its members gather in small groups for the purpose of relating, sharing experiences, learning about God, among other things. As the church grows, it becomes necessary to manage these groups in some way, and the most common way is to use a spreadsheet.",
+      "articleTwo": "GC Manager is a web application that aims to facilitate the management of Growth Groups of the Angelim Teresina Church and its campuses, allowing the creation, editing, and deletion of groups, user creation, access control via permissions, etc.",
+      "articleThreePartOne": "One of the main features of this system is the ability to generate banners with the information of a GC. Not long ago, this work was done using the online tool ",
+      "articleThreePartTwo": "and all the information was entered manually, which took about 8 minutes to complete. The work involved: checking the GC data in a previously filled spreadsheet, adding the information to the template, and downloading the banner.",
+      "articleFourPartOne": "Later, when I took on the responsibility of updating the information of the GCs and generating the banners, I created a script using Javascript, and the time to generate a single banner dropped to less than 1 second! The script fetched the GC information from a file ",
+      "articleFourPartTwo": "exported from a Google Sheets spreadsheet and generated the image using the library ",
+      "articleFourPartThree": "along with the Node.js File System module. This mini project significantly reduced the time spent when I needed to generate banners in bulk and was used for a long time.",
+      "articleFive": "This only solved part of the problem. Now, it is necessary for other people to manage this, hence the need for a system that facilitates this work and is available, preferably on the internet."
+    }
+  }
+}

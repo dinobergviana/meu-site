@@ -5,30 +5,25 @@
       v-model="selectedLang"
       class="language-select"
       @change="setLanguage"
+      @click="switchLanguage(selectedLang)"
     >
-      <option value="pt">BR</option>
-      <option value="en">EN</option>
+      <option class="language-select-option" value="pt">BR</option>
+      <option class="language-select-option" value="en">EN</option>
     </select>
   </header>
 </template>
 
-<script>
-import { useGlobalState } from "../../stores/global-state";
+<script setup>
+import { ref } from "vue";
+import { useI18n } from "vue-i18n";
 
-export default {
-  name: "MainHeader",
-  data() {
-    return {
-      selectedLang: "pt",
-    };
-  },
-  methods: {
-    setLanguage() {
-      const store = useGlobalState();
-      store.$state.lang = this.selectedLang;
-    },
-  },
-};
+const { locale } = useI18n();
+
+const selectedLang = ref(locale.value);
+
+function switchLanguage(lang) {
+  locale.value = lang;
+}
 </script>
 
 <style scoped>
@@ -37,15 +32,21 @@ export default {
   align-items: centers;
   justify-content: flex-end;
   padding: 8px 16px;
+  background-color: var(--dark-800);
 }
 
 .language-select {
   background: transparent;
   border: none;
-  color: #fff;
+  color: var(--white);
   padding: 4px 12px;
   appearance: none;
   -webkit-appearance: none;
+}
+
+.language-select-option {
+  background: var(--dark-800);
+  color: var(--white);
 }
 
 .language-select:hover {
