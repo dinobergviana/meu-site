@@ -1,5 +1,19 @@
 {
+  "hero": {
+    "title": "Hi, I'm Dinbergue Viana",
+    "role": "Programmer"
+  },
+  "about": {
+    "title": "about me"
+  },
+  "jobs": {
+    "title": "work experiences"
+  },
+  "education": {
+    "title": "education"
+  },
   "projects": {
+    "title": "projects",
     "gcManager": {
       "pageTitle": "GC Manager",
       "articleOneTitle": "How did this project start?",
@@ -41,6 +55,7 @@
       "articleSixListSevenItemTwo": "Custom error messages displayed appropriately to facilitate user experience.",
       "articleSixListSevenItemTree": "Support for multiple environments (development, staging, production).",
       "articleSevenTitle": "Summary of technologies used"
-    }
+    },
+    "repositoryLabel": "Repository"
   }
 }

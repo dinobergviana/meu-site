@@ -3,10 +3,16 @@ export const EXPERIENCE_LANG = {
     {
       title: "Enjoei",
       role: "Desenvolvedor Frontend",
-      period: "Mai 2024",
-      jobSituation: "current",
-      stacksText: "Trabalho aqui atualmente",
-      stacks: null,
+      period: "Mai 2024 - Mai 2025",
+      jobSituation: "past",
+      stacksText: "Trabalhei com: ",
+      stacks: [
+        "Vue.js",
+        ", Vuex",
+        ", Typescript",
+        ", Rails",
+        "Vitest, Vue Test Utils",
+      ],
     },
     {
       title: "Educacros",
@@ -45,10 +51,16 @@ export const EXPERIENCE_LANG = {
     {
       title: "Enjoei",
       role: "Frontend Developer",
-      period: "May 2024",
+      period: "May 2024 - May 2025",
       jobSituation: "current",
       stacksText: "I currently work here",
-      stacks: [],
+      stacks: [
+        "Vue.js",
+        ", Vuex",
+        ", Typescript",
+        ", Rails",
+        "Vitest, Vue Test Utils",
+      ],
     },
     {
       title: "Educacros",

@@ -5,7 +5,7 @@
     </div>
     <div class="about-text-container">
       <div>
-        <h2 class="about-title">{{ title }}</h2>
+        <h2 class="about-title">{{ t("about.title") }}</h2>
         <p class="about-text-paragraph" v-html="p1" />
         <p class="about-text-paragraph" v-html="p2" />
         <p class="about-text-paragraph" v-html="p3" />
@@ -16,34 +16,31 @@
     </div>
   </section>
 </template>
-<script>
-import { mapState } from "pinia";
-import { useGlobalState } from "../../stores/global-state";
+
+<script setup>
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
 import { ABOUT_LANG } from "./about-lang";
 
-export default {
-  name: "About",
-  computed: {
-    ...mapState(useGlobalState, {
-      lang: "getLang",
-      title() {
-        return ABOUT_LANG[this.lang].title;
-      },
-      p1() {
-        return ABOUT_LANG[this.lang].p1;
-      },
-      p2() {
-        return ABOUT_LANG[this.lang].p2;
-      },
-      p3() {
-        return ABOUT_LANG[this.lang].p3;
-      },
-      small() {
-        return ABOUT_LANG[this.lang].small;
-      },
-    }),
-  },
-};
+const { t } = useI18n();
+const { locale } = useI18n();
+
+const p1 = computed(() => {
+  return ABOUT_LANG[locale.value].p1;
+});
+
+const p2 = computed(() => {
+  return ABOUT_LANG[locale.value].p2;
+});
+
+const p3 = computed(() => {
+  return ABOUT_LANG[locale.value].p3;
+});
+
+const small = computed(() => {
+  return ABOUT_LANG[locale.value].small;
+});
 </script>
 
 <style>

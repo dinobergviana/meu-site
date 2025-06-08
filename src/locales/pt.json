@@ -1,5 +1,19 @@
 {
+  "hero": {
+    "title": "Olá, eu sou Dinbergue Viana",
+    "role": "Programador"
+  },
+  "about": {
+    "title": "sobre mim"
+  },
+  "jobs": {
+    "title": "experiências"
+  },
+  "education": {
+    "title": "formação"
+  },
   "projects": {
+    "title": "projetos",
     "gcManager": {
       "pageTitle": "Gerenciador de GC",
       "articleOneTitle": "Como esse projeto nasceu?",
@@ -41,6 +55,7 @@
       "articleSixListSevenItemTwo": "Mensagens de erro customizadas exibidas adequadamente para facilitar a experiência dos usuários.",
       "articleSixListSevenItemTree": "Suporte a múltiplos ambientes (desenvolvimento, homologação, produção).",
       "articleSevenTitle": "Resumo das tecnologias utilizadas"
-    }
+    },
+    "repositoryLabel": "Repositório"
   }
 }

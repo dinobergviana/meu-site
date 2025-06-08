@@ -2,7 +2,7 @@
   <section id="experience" class="experience-container">
     <div class="experience-title-container">
       <h3 class="experience-title">
-        {{ lang === "pt" ? "experiências." : "work expereiences." }}
+        {{ t("jobs.title") }}
       </h3>
     </div>
     <div class="companies-container">
@@ -18,21 +18,19 @@
     </div>
   </section>
 </template>
-<script>
-import { mapState } from "pinia";
-import { useGlobalState } from "../../stores/global-state";
+
+<script setup>
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
 import { EXPERIENCE_LANG } from "./experience-lang";
-export default {
-  name: "Experience",
-  computed: {
-    ...mapState(useGlobalState, {
-      lang: "getLang",
-      jobs() {
-        return EXPERIENCE_LANG[this.lang];
-      },
-    }),
-  },
-};
+
+const { t } = useI18n();
+const { locale } = useI18n();
+
+const jobs = computed(() => {
+  return EXPERIENCE_LANG[locale.value] || [];
+});
 </script>
 
 <style scoped>

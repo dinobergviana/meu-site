@@ -1,7 +1,7 @@
 <template>
   <section class="hero-container">
     <div>
-      <h1 class="title">{{ title }}</h1>
+      <h1 class="title">{{ t("hero.title") }}</h1>
     </div>
     <div class="bio-description-container">
       <span class="bio-description">{{ role }}</span>
@@ -36,25 +36,19 @@
     </div>
   </section>
 </template>
-<script>
-import { mapState } from "pinia";
-import { useGlobalState } from "../../stores/global-state";
+
+<script setup>
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
 import { HERO_LANG } from "./hero-lang";
 
-export default {
-  name: "Hero",
-  computed: {
-    ...mapState(useGlobalState, {
-      lang: "getLang",
-      title() {
-        return HERO_LANG[this.lang].heroTitle;
-      },
-      role() {
-        return HERO_LANG[this.lang].heroRole;
-      },
-    }),
-  },
-};
+const { t } = useI18n();
+const { locale } = useI18n();
+
+const role = computed(() => {
+  return HERO_LANG[locale.value].heroRole;
+});
 </script>
 
 <style scoped>

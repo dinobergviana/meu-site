@@ -2,7 +2,7 @@
   <section id="education" class="education-container">
     <div class="education-title-container">
       <h3 class="education-title">
-        {{ lang === "pt" ? "formação." : "education." }}
+        {{ t("education.title") }}
       </h3>
     </div>
     <div class="certificates-container">
@@ -18,22 +18,19 @@
     </div>
   </section>
 </template>
-<script>
-import { mapState } from "pinia";
-import { useGlobalState } from "../../stores/global-state";
+
+<script setup>
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
 import { EDUCATION_LANG } from "./education-lang";
 
-export default {
-  name: "education",
-  computed: {
-    ...mapState(useGlobalState, {
-      lang: "getLang",
-      education() {
-        return EDUCATION_LANG[this.lang];
-      },
-    }),
-  },
-};
+const { t } = useI18n();
+const { locale } = useI18n();
+
+const education = computed(() => {
+  return EDUCATION_LANG[locale.value] || [];
+});
 </script>
 
 <style scoped>
