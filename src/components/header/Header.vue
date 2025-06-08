@@ -21,8 +21,8 @@ const { locale } = useI18n();
 const selectedLang = ref(locale.value);
 
 watch(selectedLang, () => {
-  switchLanguage()
-})
+  switchLanguage();
+});
 
 function switchLanguage() {
   locale.value = selectedLang.value;

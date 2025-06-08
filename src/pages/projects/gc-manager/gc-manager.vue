@@ -50,170 +50,152 @@
       </article>
 
       <article>
-        <h2>Informações técnicas</h2>
+        <h2>{{ t("projects.gcManager.articleSixTitle") }}</h2>
 
         <h3 class="tecnical-information-title">
-          🧱 Arquitetura MVC (Model-View-Controller)
+          🧱 {{ t("projects.gcManager.articleSixSubtitleOne") }}
         </h3>
         <ul class="tecnical-information-list-content">
           <li>
             <p>
-              Separação clara entre responsabilidades: lógica de negócio
-              (Model), interface com o usuário (View) e controle do fluxo de
-              dados (Controller).
+              {{ t("projects.gcManager.articleSixListOneItemOne") }}
             </p>
           </li>
           <li>
             <p>
-              Facilita a manutenção, escalabilidade e testabilidade do sistema.
+              {{ t("projects.gcManager.articleSixListOneItemTwo") }}
             </p>
           </li>
           <li>
             <p>
-              Torna o código mais organizado e fácil de entender, ideal para
-              projetos que possam crescer ou ter múltiplos desenvolvedores
-              envolvidos.
-            </p>
-          </li>
-        </ul>
-
-        <h3 class="tecnical-information-title">📦 Infraestrutura com Docker</h3>
-        <ul class="tecnical-information-list-content">
-          <li>
-            <p>
-              Ambiente isolado e replicável: o sistema pode ser executado em
-              qualquer máquina com Docker, garantindo que todos os
-              desenvolvedores e ambientes usem a mesma configuração.
-            </p>
-          </li>
-          <li>
-            <p>
-              Facilidade na configuração de dependências, como banco de dados e
-              serviços auxiliares, usando docker-compose.
-            </p>
-          </li>
-          <li>
-            <p>
-              Preparado para deployment em containers, facilitando a transição
-              entre desenvolvimento, testes e produção.
+              {{ t("projects.gcManager.articleSixListOneItemThree") }}
             </p>
           </li>
         </ul>
 
         <h3 class="tecnical-information-title">
-          🗃️ Versionamento do Banco de Dados
+          📦 {{ t("projects.gcManager.articleSixListSubtitleTwo") }}
         </h3>
         <ul class="tecnical-information-list-content">
           <li>
             <p>
-              Gerenciamento de alterações na estrutura do banco via migrations,
-              mantendo o histórico e controle total sobre as modificações.
+              {{ t("projects.gcManager.articleSixListTwoItemOne") }}
             </p>
           </li>
           <li>
             <p>
-              Sincronização automática entre ambientes (desenvolvimento,
-              homologação e produção), evitando conflitos ou inconsistências.
+              {{ t("projects.gcManager.articleSixListTwoItemTwo") }}
             </p>
           </li>
           <li>
             <p>
-              Facilidade para reverter alterações, caso necessário, com
-              segurança e previsibilidade.
+              {{ t("projects.gcManager.articleSixListTwoItemThree") }}
             </p>
           </li>
         </ul>
 
         <h3 class="tecnical-information-title">
-          🧹 Qualidade e Padrões de Código
+          🗃️ {{ t("projects.gcManager.articleSixSubtitleTree") }}
         </h3>
         <ul class="tecnical-information-list-content">
           <li>
             <p>
-              Uso do Prettier para garantir uma formatação consistente e
-              automatizada do código.
+              {{ t("projects.gcManager.articleSixListThreeItemOne") }}
             </p>
           </li>
           <li>
             <p>
-              Linting com regras definidas, ajudando a evitar erros comuns e a
-              seguir boas práticas de desenvolvimento.
+              {{ t("projects.gcManager.articleSixListThreeItemTwo") }}
             </p>
           </li>
           <li>
             <p>
-              Commits padronizados com Conventional Commits, facilitando a
-              leitura do histórico de mudanças e integrando com ferramentas de
-              versionamento e automações (como geração de changelog).
-            </p>
-          </li>
-        </ul>
-
-        <h3 class="tecnical-information-title">✅ Testes Automatizados</h3>
-        <ul class="tecnical-information-list-content">
-          <li>
-            <p>
-              Cobertura de testes unitários para garantir que cada parte isolada
-              do sistema funcione como esperado.
-            </p>
-          </li>
-          <li>
-            <p>
-              Testes de integração para validar o comportamento entre os módulos
-              e serviços do sistema.
-            </p>
-          </li>
-          <li>
-            <p>
-              Execução automatizada dos testes como parte do processo de
-              desenvolvimento, contribuindo para entregas mais seguras e ágeis.
+              {{ t("projects.gcManager.articleSixListThreeItemTree") }}
             </p>
           </li>
         </ul>
 
         <h3 class="tecnical-information-title">
-          🔐 Autenticação e Autorização
+          🧹 {{ t("projects.gcManager.articleSixListSubtitleFour") }}
         </h3>
         <ul class="tecnical-information-list-content">
           <li>
             <p>
-              Sistema de autenticação seguro com armazenamento criptografado de
-              senhas.
+              {{ t("projects.gcManager.articleSixListFourItemOne") }}
             </p>
           </li>
           <li>
             <p>
-              Controle de acesso baseado em permissões, permitindo que
-              diferentes perfis de usuários tenham acessos diferenciados.
+              {{ t("projects.gcManager.articleSixListFourItemTwo") }}
             </p>
           </li>
           <li>
             <p>
-              Proteção de rotas para garantir que apenas usuários autorizados
-              acessem determinadas partes do sistema.
+              {{ t("projects.gcManager.articleSixListFourItemTree") }}
             </p>
           </li>
         </ul>
 
-        <h3 class="tecnical-information-title">📈 E muito mais</h3>
+        <h3 class="tecnical-information-title">
+          ✅ {{ t("projects.gcManager.articleSixListSubtitleFive") }}
+        </h3>
         <ul class="tecnical-information-list-content">
           <li>
-            <p>Interface amigável e responsiva.</p>
-          </li>
-          <li>
-            <p>Logs e mensagens de erro tratadas e exibidas adequadamente.</p>
+            <p>
+              {{ t("projects.gcManager.articleSixListFiveItemOne") }}
+            </p>
           </li>
           <li>
             <p>
-              Suporte a múltiplos ambientes (desenvolvimento, homologação,
-              produção).
+              {{ t("projects.gcManager.articleSixListFiveItemTwo") }}
             </p>
+          </li>
+          <li>
+            <p>
+              {{ t("projects.gcManager.articleSixListFiveItemTree") }}
+            </p>
+          </li>
+        </ul>
+
+        <h3 class="tecnical-information-title">
+          🔐 {{ t("projects.gcManager.articleSixSubtitleSix") }}
+        </h3>
+        <ul class="tecnical-information-list-content">
+          <li>
+            <p>
+              {{ t("projects.gcManager.articleSixListSixItemOne") }}
+            </p>
+          </li>
+          <li>
+            <p>
+              {{ t("projects.gcManager.articleSixListSixItemTwo") }}
+            </p>
+          </li>
+          <li>
+            <p>
+              {{ t("projects.gcManager.articleSixListSixItemTree") }}
+            </p>
+          </li>
+        </ul>
+
+        <h3 class="tecnical-information-title">
+          📈 {{ t("projects.gcManager.articleSixSubtitleSeven") }}
+        </h3>
+        <ul class="tecnical-information-list-content">
+          <li>
+            <p>{{ t("projects.gcManager.articleSixListSevenItemOne") }}</p>
+          </li>
+          <li>
+            <p>{{ t("projects.gcManager.articleSixListSevenItemTwo") }}</p>
+          </li>
+          <li>
+            <p>{{ t("projects.gcManager.articleSixListSevenItemTree") }}</p>
           </li>
         </ul>
       </article>
 
       <article>
-        <h2>Resumo das tecnologias utilizadas</h2>
+        <h2>{{ t("projects.gcManager.articleSevenTitle") }}</h2>
 
         <h3 class="tecnical-information-title">Frontend</h3>
         <ul class="tecnical-information-list-content">
