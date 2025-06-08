@@ -1,6 +1,7 @@
 <template>
   <section>
     <!-- <Navbar/> -->
+    <CHeader />
     <main class="main-container">
       <router-view />
     </main>
@@ -10,11 +11,12 @@
 
 <script>
 import CFooter from "./components/global/Footer.vue";
-
+import CHeader from "./components/header/Header.vue";
 export default {
   name: "App",
   components: {
     CFooter,
+    CHeader,
   },
 };
 </script>

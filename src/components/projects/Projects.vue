@@ -14,6 +14,13 @@
         <h3 class="project-name">{{ project.title }}</h3>
         <p class="description">{{ project.description }}</p>
         <span class="project-status">{{ project.status }}</span>
+        <a
+          :href="project.repositoryUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Respositório</a
+        >
+        <span v-if="project.url" class="separator-dot">&bull;</span>
         <router-link :to="project.url">{{ project.linkLabel }}</router-link>
       </div>
     </div>
@@ -111,5 +118,9 @@ hr {
     justify-content: center;
     margin-bottom: 4rem;
   }
+}
+
+.separator-dot {
+  margin: 0 8px;
 }
 </style>
