@@ -2,7 +2,7 @@
   <section id="project" class="projects-container">
     <div class="project-section-title-container">
       <h3 class="project-section-title">
-        {{ lang === "pt" ? "projetos." : "project." }}
+        {{ t("projects.title") }}
       </h3>
     </div>
     <div class="project-container">
@@ -18,7 +18,7 @@
           :href="project.repositoryUrl"
           target="_blank"
           rel="noopener noreferrer"
-          >Respositório</a
+          >{{ t("projects.repositoryLabel") }}</a
         >
         <span v-if="project.url" class="separator-dot">&bull;</span>
         <router-link :to="project.url || ''">{{
@@ -28,22 +28,18 @@
     </div>
   </section>
 </template>
-<script>
-import { mapState } from "pinia";
-import { useGlobalState } from "../../stores/global-state";
+<script setup>
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+
 import { PROJECTS_LANG } from "./projects-lang.js";
 
-export default {
-  name: "project",
-  computed: {
-    ...mapState(useGlobalState, {
-      lang: "getLang",
-      projects() {
-        return PROJECTS_LANG[this.lang];
-      },
-    }),
-  },
-};
+const { t } = useI18n();
+const { locale } = useI18n();
+
+const projects = computed(() => {
+  return PROJECTS_LANG[locale.value] || [];
+});
 </script>
 
 <style scoped>

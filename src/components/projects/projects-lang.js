@@ -28,7 +28,7 @@ export const PROJECTS_LANG = {
       url: "/projects/gc-manager",
     },
     {
-      title: "My Website",
+      title: "My website",
       description:
         "A personal website to share information about my career and projects.",
       status: "Completed",
