@@ -21,7 +21,9 @@
           >Respositório</a
         >
         <span v-if="project.url" class="separator-dot">&bull;</span>
-        <router-link :to="project.url || ''">{{ project.linkLabel }}</router-link>
+        <router-link :to="project.url || ''">{{
+          project.linkLabel
+        }}</router-link>
       </div>
     </div>
   </section>
