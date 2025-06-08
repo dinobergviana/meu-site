@@ -53,7 +53,7 @@ export const EXPERIENCE_LANG = {
       role: "Frontend Developer",
       period: "May 2024 - May 2025",
       jobSituation: "current",
-      stacksText: "I currently work here",
+      stacksText: "I worked with: ",
       stacks: [
         "Vue.js",
         ", Vuex",
