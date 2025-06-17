@@ -182,7 +182,9 @@
       <article>
         <h2>{{ t("projects.gcManager.articleSevenTitle") }}</h2>
 
-        <h3 class="tecnical-information-title">Frontend - {{ t("projects.gcManager.userInterfaceInfo") }}</h3>
+        <h3 class="tecnical-information-title">
+          Frontend - {{ t("projects.gcManager.userInterfaceInfo") }}
+        </h3>
         <ul class="tecnical-information-list-content">
           <li>
             <p>React.</p>
@@ -196,14 +198,8 @@
         <ul class="tecnical-information-list-content">
           <li>
             <p>
-              {{ t("projects.gcManager.hosting") }}: 
-              <a
-                href="https://vercel.com/"
-                target="_blank"
-              >
-                Vercel;
-              </a
-              >              
+              {{ t("projects.gcManager.hosting") }}:
+              <a href="https://vercel.com/" target="_blank"> Vercel; </a>
             </p>
           </li>
           <li>
@@ -215,7 +211,7 @@
         </ul>
 
         <p>
-          {{ t('projects.gcManager.backendFeatures') }}
+          {{ t("projects.gcManager.backendFeatures") }}
         </p>
       </article>
     </div>
