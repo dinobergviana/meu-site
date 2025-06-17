@@ -50,11 +50,10 @@
       "articleSixListSixItemOne": "Secure authentication system with encrypted password storage.",
       "articleSixListSixItemTwo": "Permission-based access control, allowing different user profiles to have differentiated accesses.",
       "articleSixListSixItemTree": "Route protection to ensure that only authorized users access certain parts of the system.",
-      "articleSixSubtitleSeven": "And much more",
-      "articleSixListSevenItemOne": "User-friendly and responsive interface.",
-      "articleSixListSevenItemTwo": "Custom error messages displayed appropriately to facilitate user experience.",
-      "articleSixListSevenItemTree": "Support for multiple environments (development, staging, production).",
-      "articleSevenTitle": "Summary of technologies used"
+      "articleSevenTitle": "Summary of technologies used",
+      "userInterfaceInfo": "Soon",
+      "hosting": "Hosting",
+      "backendFeatures": "In addition to using a structure that enables code organization, context separation, and test coverage (both locally and in CI actions), the system already includes authentication, user creation, the ability to check and run pending migrations via the /migrations endpoint, and health checks via the /status endpoint."
     },
     "repositoryLabel": "Repository"
   }

@@ -177,27 +177,14 @@
             </p>
           </li>
         </ul>
-
-        <h3 class="tecnical-information-title">
-          📈 {{ t("projects.gcManager.articleSixSubtitleSeven") }}
-        </h3>
-        <ul class="tecnical-information-list-content">
-          <li>
-            <p>{{ t("projects.gcManager.articleSixListSevenItemOne") }}</p>
-          </li>
-          <li>
-            <p>{{ t("projects.gcManager.articleSixListSevenItemTwo") }}</p>
-          </li>
-          <li>
-            <p>{{ t("projects.gcManager.articleSixListSevenItemTree") }}</p>
-          </li>
-        </ul>
       </article>
 
       <article>
         <h2>{{ t("projects.gcManager.articleSevenTitle") }}</h2>
 
-        <h3 class="tecnical-information-title">Frontend</h3>
+        <h3 class="tecnical-information-title">
+          Frontend - {{ t("projects.gcManager.userInterfaceInfo") }}
+        </h3>
         <ul class="tecnical-information-list-content">
           <li>
             <p>React.</p>
@@ -210,12 +197,22 @@
         <h3 class="tecnical-information-title">Backend</h3>
         <ul class="tecnical-information-list-content">
           <li>
+            <p>
+              {{ t("projects.gcManager.hosting") }}:
+              <a href="https://vercel.com/" target="_blank"> Vercel; </a>
+            </p>
+          </li>
+          <li>
             <p>Node, Next, Docker, Postgres.</p>
           </li>
           <li>
             <p>Jest.</p>
           </li>
         </ul>
+
+        <p>
+          {{ t("projects.gcManager.backendFeatures") }}
+        </p>
       </article>
     </div>
   </section>
