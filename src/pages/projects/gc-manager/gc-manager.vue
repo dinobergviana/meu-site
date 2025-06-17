@@ -282,12 +282,4 @@ p {
 article + article {
   margin-top: 2rem;
 }
-
-.code-line {
-  background-color: var(--gray-100);
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  font-family: monospace;
-  color: var(--gray-800);
-}
 </style>
