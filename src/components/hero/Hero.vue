@@ -39,7 +39,12 @@
 
 <script setup>
 import { computed } from "vue";
-import { PhLinkedinLogo, PhGithubLogo, PhWhatsappLogo, PhArrowCircleDown } from "@phosphor-icons/vue"
+import {
+  PhLinkedinLogo,
+  PhGithubLogo,
+  PhWhatsappLogo,
+  PhArrowCircleDown,
+} from "@phosphor-icons/vue";
 import { useI18n } from "vue-i18n";
 
 import { HERO_LANG } from "./hero-lang";
