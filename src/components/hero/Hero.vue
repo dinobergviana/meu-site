@@ -12,26 +12,26 @@
         target="_blank"
         class="media-link"
       >
-        <img src="../../assets/linkedin.svg" alt="" />
+        <PhLinkedinLogo size="24" color="#717c8a" />
       </a>
       <a
         href="https://github.com/dinobergviana"
         target="_blank"
         class="media-link"
       >
-        <img src="../../assets/github.svg" alt="" />
+        <PhGithubLogo size="24" color="#717c8a" />
       </a>
       <a
         href="https://api.whatsapp.com/send?phone=5586998055574"
         target="_blank"
         class="media-link"
       >
-        <img src="../../assets/whatsapp.svg" alt="" />
+        <PhWhatsappLogo size="24" color="#717c8a" />
       </a>
     </div>
     <div class="navigate-down-container">
       <a href="#about" class="navigate-down-button">
-        <img src="../../assets/arrow-down.svg" alt="" />
+        <PhArrowCircleDown size="36" color="#dfdfdf" />
       </a>
     </div>
   </section>
@@ -39,6 +39,12 @@
 
 <script setup>
 import { computed } from "vue";
+import {
+  PhLinkedinLogo,
+  PhGithubLogo,
+  PhWhatsappLogo,
+  PhArrowCircleDown,
+} from "@phosphor-icons/vue";
 import { useI18n } from "vue-i18n";
 
 import { HERO_LANG } from "./hero-lang";
@@ -134,16 +140,7 @@ const role = computed(() => {
 }
 
 .navigate-down-button {
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: none;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: 0.2s;
   cursor: pointer;
 }
