@@ -29,17 +29,16 @@
         <img src="../../assets/whatsapp.svg" alt="" />
       </a>
     </div>
-    <div class="navigate-down-container">
-      <a href="#about" class="navigate-down-button">
-        <img src="../../assets/arrow-down.svg" alt="" />
-      </a>
-    </div>
+
+    <NavigateButton section-id="#about" />
   </section>
 </template>
 
 <script setup>
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
+
+import NavigateButton from "../buttons/NavigateButton.vue";
 
 import { HERO_LANG } from "./hero-lang";
 
@@ -52,22 +51,6 @@ const role = computed(() => {
 </script>
 
 <style scoped>
-@keyframes go-back {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(15px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-  0% {
-    transform: translateY(15px);
-  }
-}
-
 .hero-container {
   position: relative;
   min-height: 100vh;
@@ -125,30 +108,5 @@ const role = computed(() => {
   width: 4px;
   border-radius: 50%;
   background: var(--gray-200);
-}
-
-.navigate-down-container {
-  position: absolute;
-  bottom: 3em;
-  animation: go-back 1s;
-}
-
-.navigate-down-button {
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: none;
-  opacity: 0.8;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-.navigate-down-button:hover {
-  opacity: 1;
 }
 </style>

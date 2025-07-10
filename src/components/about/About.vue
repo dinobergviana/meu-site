@@ -14,12 +14,16 @@
         </div>
       </div>
     </div>
+    
+    <NavigateButton section-id="#experience" background-color="#161b22" />
   </section>
 </template>
 
 <script setup>
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
+
+import NavigateButton from "../buttons/NavigateButton.vue";
 
 import { ABOUT_LANG } from "./about-lang";
 
@@ -45,6 +49,7 @@ const small = computed(() => {
 
 <style>
 .about-container {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
