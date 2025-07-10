@@ -45,6 +45,7 @@ const small = computed(() => {
 
 <style>
 .about-container {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 100vh;
