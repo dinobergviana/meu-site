@@ -14,16 +14,12 @@
         </div>
       </div>
     </div>
-    
-    <NavigateButton section-id="#experience" background-color="#161b22" />
   </section>
 </template>
 
 <script setup>
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
-
-import NavigateButton from "../buttons/NavigateButton.vue";
 
 import { ABOUT_LANG } from "./about-lang";
 

@@ -1,26 +1,41 @@
 <template>
   <div class="navigate-down-container">
     <a :href="sectionId" class="navigate-down-button">
-      <img src="../../assets/arrow-down.svg" alt="Botão para navegar entre seções" />
+      <PhArrowCircleUp v-if="direction === 'up'" :size="size" :color="color" />
+      <PhArrowCircleDown v-else :size="size" :color="color" />
     </a>
   </div>
 </template>
 
 <script setup>
-  defineProps({
-    sectionId: {
-      type: String,
-      required: true
-    },
-    postionX: {
-      type: String,
-      default: "50%"
-    },
-    backgroundColor: {
-      type: String,
-      default: "#fff"
-    }
-  })
+import { PhArrowCircleUp, PhArrowCircleDown } from "@phosphor-icons/vue";
+
+defineProps({
+  sectionId: {
+    type: String,
+    required: true,
+  },
+  postionX: {
+    type: String,
+    default: "50%",
+  },
+  color: {
+    type: String,
+    default: "#dfdfdf",
+  },
+  size: {
+    type: String,
+    default: "24",
+  },
+  direction: {
+    type: String,
+    default: "up",
+  },
+  bottom: {
+    type: String,
+    default: "3rem",
+  },
+});
 </script>
 
 <style scoped>
@@ -42,22 +57,13 @@
 
 .navigate-down-container {
   position: absolute;
-  bottom: 3em;
+  bottom: v-bind(bottom);
   animation: go-back 1s;
   left: v-bind(postionX);
 }
 
 .navigate-down-button {
-  background: v-bind(backgroundColor);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: none;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: 0.2s;
   cursor: pointer;
 }

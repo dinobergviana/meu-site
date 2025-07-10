@@ -1,5 +1,5 @@
 <template>
-  <section class="hero-container">
+  <section class="hero-container" id="hero">
     <div>
       <h1 class="title">{{ t("hero.title") }}</h1>
     </div>
@@ -29,11 +29,8 @@
         <PhWhatsappLogo size="24" color="#717c8a" />
       </a>
     </div>
-    <div class="navigate-down-container">
-      <a href="#about" class="navigate-down-button">
-        <PhArrowCircleDown size="36" color="#dfdfdf" />
-      </a>
-    </div>
+
+    <NavigateButton section-id="#about" size="36" direction="down" />
   </section>
 </template>
 
@@ -43,8 +40,10 @@ import {
   PhLinkedinLogo,
   PhGithubLogo,
   PhWhatsappLogo,
-  PhArrowCircleDown,
 } from "@phosphor-icons/vue";
+
+import NavigateButton from "../buttons/NavigateButton.vue";
+
 import { useI18n } from "vue-i18n";
 
 import { HERO_LANG } from "./hero-lang";
@@ -115,21 +114,5 @@ const role = computed(() => {
   width: 4px;
   border-radius: 50%;
   background: var(--gray-200);
-}
-
-.navigate-down-container {
-  position: absolute;
-  bottom: 3em;
-  animation: go-back 1s;
-}
-
-.navigate-down-button {
-  opacity: 0.9;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-.navigate-down-button:hover {
-  opacity: 1;
 }
 </style>

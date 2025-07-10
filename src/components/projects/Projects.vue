@@ -26,11 +26,21 @@
         }}</router-link>
       </div>
     </div>
+
+    <NavigateButton
+      section-id="#hero"
+      size="36"
+      direction="up"
+      bottom="0"
+      color="#242424"
+    />
   </section>
 </template>
 <script setup>
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
+
+import NavigateButton from "../buttons/NavigateButton.vue";
 
 import { PROJECTS_LANG } from "./projects-lang.js";
 
@@ -44,6 +54,7 @@ const projects = computed(() => {
 
 <style scoped>
 .projects-container {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 50vh;
