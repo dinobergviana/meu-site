@@ -6,6 +6,7 @@ export const i18n = createI18n({
   legacy: false,
   locale: "pt",
   fallbackLocale: "en",
+  warnHtmlMessage: false,
   messages: {
     en,
     pt,

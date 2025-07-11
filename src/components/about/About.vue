@@ -21,25 +21,22 @@
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-import { ABOUT_LANG } from "./about-lang";
-
 const { t } = useI18n();
-const { locale } = useI18n();
 
 const p1 = computed(() => {
-  return ABOUT_LANG[locale.value].p1;
+  return t("about.p1");
 });
 
 const p2 = computed(() => {
-  return ABOUT_LANG[locale.value].p2;
+  return t("about.p2");
 });
 
 const p3 = computed(() => {
-  return ABOUT_LANG[locale.value].p3;
+  return t("about.p3");
 });
 
 const small = computed(() => {
-  return ABOUT_LANG[locale.value].small;
+  return t("about.small");
 });
 </script>
 
