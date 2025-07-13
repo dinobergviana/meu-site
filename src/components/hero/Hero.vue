@@ -4,7 +4,7 @@
       <h1 class="title">{{ t("hero.title") }}</h1>
     </div>
     <div class="bio-description-container">
-      <span class="bio-description">{{ role }}</span>
+      <span class="bio-description">{{ t("hero.role") }}</span>
     </div>
     <div class="medias-container">
       <a
@@ -35,25 +35,17 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
 import {
   PhLinkedinLogo,
   PhGithubLogo,
   PhWhatsappLogo,
 } from "@phosphor-icons/vue";
 
-import NavigateButton from "../buttons/NavigateButton.vue";
+import NavigateButton from "../global/NavigateButton.vue";
 
 import { useI18n } from "vue-i18n";
 
-import { HERO_LANG } from "./hero-lang";
-
 const { t } = useI18n();
-const { locale } = useI18n();
-
-const role = computed(() => {
-  return HERO_LANG[locale.value].heroRole;
-});
 </script>
 
 <style scoped>
