@@ -41,7 +41,7 @@ import {
   PhWhatsappLogo,
 } from "@phosphor-icons/vue";
 
-import NavigateButton from "../buttons/NavigateButton.vue";
+import NavigateButton from "../global/NavigateButton.vue";
 
 import { useI18n } from "vue-i18n";
 

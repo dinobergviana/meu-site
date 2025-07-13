@@ -40,7 +40,7 @@
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-import NavigateButton from "../buttons/NavigateButton.vue";
+import NavigateButton from "../global/NavigateButton.vue";
 
 import { PROJECTS_LANG } from "./projects-lang.js";
 
