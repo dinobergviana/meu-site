@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import HomePage from "../pages/home/Home.vue";
 import GCManagerPage from "../pages/projects/gc-manager/gc-manager.vue";
+import myJourney from "../pages/my-journey/my-journey.vue";
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     path: "/projects/gc-manager",
     name: "GCManagerPage",
     component: GCManagerPage,
+  },
+  {
+    path: "/my-journey",
+    name: "MyJourney",
+    component: myJourney,
   },
 ];
 

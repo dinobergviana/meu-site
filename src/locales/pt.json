@@ -8,7 +8,7 @@
     "p1": "Entrei no mercado de programação como <strong>Desenvolvedor Web</strong> em 2021 após dicidir mudar de carreira no ano anterior.",
     "p2": "Atualmente <strong>estou cursando Análise e Desenvolvimento de Sistemas</strong> pela Uni Dom Bosco e <strong>possuo certificado em Desenvolvimento Web Full Stack Node</strong> pela <strong><a href=\"https://www.digitalhouse.com/br\" target=\"_blank\">Digital House</a></strong>.",
     "p3": "Além da faculdade, <strong>também sou aluno do <a href=\"http://curso.dev\" target=\"_blank\">curso.dev</a></strong> do <strong><a href=\"https://filipedeschamps.com.br/\" target=\"_blank\">Filipe Deschamps</a></strong>.",
-    "small": "Em breve contarei com mais detalhes como foi a minha transição de carreira."
+    "link": "Saiba como foi minha transição de carreira."
   },
   "jobs": {
     "title": "experiências"
@@ -60,5 +60,8 @@
       "backendFeatures": "Além de utilizar uma estrutura que possibilita organização de código, separação de contextos, cobertura de testes (local e nas actions), o sistema já conta com autenticação, criação de usuários, possibilidade de checar e rodar migrações pendentes via endpoint /migrations, verificação da saúde do via enpoint /status."
     },
     "repositoryLabel": "Repositório"
+  },
+  "myJourney": {
+    "pageTitle": "Minha jornada até aqui"
   }
 }

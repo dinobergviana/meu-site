@@ -10,7 +10,9 @@
         <p class="about-text-paragraph" v-html="p2" />
         <p class="about-text-paragraph" v-html="p3" />
         <div class="warning">
-          <small v-html="small" />
+          <small>
+            <router-link to="/my-journey">{{ t("about.link") }}</router-link>
+          </small>
         </div>
       </div>
     </div>
@@ -33,10 +35,6 @@ const p2 = computed(() => {
 
 const p3 = computed(() => {
   return t("about.p3");
-});
-
-const small = computed(() => {
-  return t("about.small");
 });
 </script>
 
