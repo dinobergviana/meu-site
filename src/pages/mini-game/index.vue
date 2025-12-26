@@ -26,7 +26,7 @@
     </div>
 
     <div class="actions">
-      <button type="button" @click="resetGame">Resetar</button>
+<button type="button" @click="resetGame">Resetar</button>
     </div>
   </div>
 </template>
